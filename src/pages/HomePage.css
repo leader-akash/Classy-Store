@@ -18,14 +18,14 @@
 .welcome {
   background-color: #779e27;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   padding-bottom: 4.5rem;
-  margin-top: 10vh;
+  margin-top: 12vh;
 }
 
 .greeting {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .explore {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   background-color: var(--primary-color);
   border: none;
@@ -106,10 +106,15 @@ span i {
 
 /* Extra small devices (phones) */
 @media only screen and (min-width: 200px) and  (max-width: 409px) {
+    .img-settings {
+  width: 100%;
+  height: 33vh;
+  margin-bottom: 3rem;
+}
   .welcome {
     font-size: 2rem;
     padding-bottom: 2.5rem;
-    margin-top: 5vh;
+    margin-top: 10vh;
     padding-bottom: 7rem;
   }
 
@@ -151,7 +156,7 @@ span i {
     width: 100px;
   }
   .sign-in {
-    font-size: 7px;
+    font-size: 5px;
     margin-bottom: 0;
     width: 110px !important;
     /* height: 2rem; */
@@ -180,11 +185,16 @@ span i {
 }
 
 @media only screen and (min-width: 410px) and  (max-width: 619px) {
+    .img-settings {
+        width: 100%;
+        height: 39vh;
+        margin-bottom: 3rem;
+      }
     .welcome {
       font-size: 2rem;
       padding-bottom: 2rem;
-      margin-top: 5vh;
-      padding-bottom: 9rem;
+      margin-top: 12vh;
+      padding-bottom: 8rem;
     }
   
     .greeting {
@@ -226,7 +236,7 @@ span i {
     .sign-in {
       font-size: 14px;
       margin-bottom: 0;
-      width: 110px !important;
+      width: 120px !important;
       /* height: 2rem; */
       padding: 5px 8px !important;
       /* margin-right: 1rem; */
@@ -258,7 +268,7 @@ span i {
     .welcome {
         font-size: 2rem;
         padding-bottom: 2.2rem;
-        margin-top: 5vh;
+        margin-top: 12vh;
         padding-bottom: 7rem;
       }
     
@@ -333,7 +343,15 @@ span i {
 }
 
 /* Medium devices (desktops, laptops) */
-@media only screen and (min-width: 960px) and (max-width: 1279px) {
-  /* No specific changes for medium devices in the provided code */
+@media only screen and (min-width: 991px) and (max-width: 1279px) {
+  
+    
+    .welcome {
+        font-size: 2rem;
+        padding-bottom: 2.2rem;
+        margin-top: 12vh;
+        padding-bottom: 7rem;
+      }
+    
 }
 
