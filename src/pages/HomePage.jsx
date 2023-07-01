@@ -11,20 +11,24 @@ const MainPage = () =>{
                     <input class="search-input" type="text" placeholder="Search classy-store.com" />
                     <i class="fa-solid fa-magnifying-glass "></i>
                 </div>
-    <div class="item-list">
+    {/* <div class="item-list"> */}
+    <div className="icon-setting1">
     <span class="badge-icon">
     <span class="badge red">20+</span>
     <i class="fa-regular fa-heart"> </i>
     </span>
+    </div>
+    <div className="icon-setting2">
     <span class="badge-icon">
     <span class="badge blue">20+</span>
     <i class="fa-solid fa-cart-shopping " ></i>
     </span>
-    
+    </div>
+    {/* </div> */}
     <button class="sign-in">
     <i class="fa-regular fa-user"></i>
     Sign In</button>
-    </div>
+    
     </div>
 
 <div className="welcome">
