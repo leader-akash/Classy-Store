@@ -34,9 +34,9 @@ const MainPage = () =>{
 <div className="welcome">
     <img className="img-settings" src={image} alt="img here"/>
  
-    Welcome to the <span className="logo-bold">Classy Store !</span>
+    Welcome to the <span className="logo-bold">Classy Store!</span>
 
-    <div className="greeting">Exciting Products, Exciting Deals, Exciting Discounts !!</div>
+    <div className="greeting">Exciting Products, Exciting Deals, Exciting Discounts!!</div>
 
     <button className="explore">Explore</button>
 
