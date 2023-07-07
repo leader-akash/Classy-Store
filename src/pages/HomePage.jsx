@@ -6,6 +6,7 @@ import FeaturedCard from '../components/cards/featuredCard/FeaturedCard';
 import { featuredCardData } from '../data/featuredCard.data';
 import { badgeData } from '../data/badge.data';
 import Footer from '../components/footer/Footer';
+import { Link } from 'react-router-dom';
 
  const HomePage = () => {
   return (
@@ -19,7 +20,7 @@ import Footer from '../components/footer/Footer';
               </div>
               <p className="discount">Save 50% on your first purchase</p>
 
-              <button className="shopNow">Shop now</button>
+              <button className="shopNow"><Link className="shop-link" to="/product">Shop now</Link></button>
               </div>
 
               <img src={tech}  alt="tech"/>

@@ -5,6 +5,7 @@
         --primary-color: #f8cb46;
         --background-color: #fce98c;
         --feature-card: #fdf9d2;
+        --feature-card-pink: #FDEFEA;
         font-family: 'Roboto Slab', serif;
         --button: #1CC51C;
         --button-fade: #13da13;
@@ -27,7 +28,7 @@
 }
 
 .pink{
-    background-color: #FDEFEA;
+    background-color: var(--feature-card-pink);
 }
 
 .featured-card:hover{
