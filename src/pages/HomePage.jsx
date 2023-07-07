@@ -1,52 +1,73 @@
 import React from 'react';
-import image from '../images/img4.png';  
-import "./HomePage.css";
+import "./HomePage.css"
+import tech from "../assets/images/tech.png";
+import Badge from '../components/cards/badge/Badge';
+import FeaturedCard from '../components/cards/featuredCard/FeaturedCard';
+import { featuredCardData } from '../data/featuredCard.data';
+import { badgeData } from '../data/badge.data';
+import Footer from '../components/footer/Footer';
 
-const MainPage = () =>{
-    return (
+ const HomePage = () => {
+  return (
     <>
-	    <div class="nav-two-container">
-            <div class="logo">Classy Store</div>
-                <div class="search-bar">
-                    <input class="search-input" type="text" placeholder="Search classy-store.com" />
-                    <i class="fa-solid fa-magnifying-glass "></i>
-                </div>
-    {/* <div class="item-list"> */}
-    <div className="icon-setting1">
-    <span class="badge-icon">
-    <span class="badge red">20+</span>
-    <i class="fa-regular fa-heart"> </i>
-    </span>
-    </div>
-    <div className="icon-setting2">
-    <span class="badge-icon">
-    <span class="badge blue">20+</span>
-    <i class="fa-solid fa-cart-shopping " ></i>
-    </span>
-    </div>
-    {/* </div> */}
-    <button class="sign-in">
-    <i class="fa-regular fa-user"></i>
-    Sign In</button>
-    
-    </div>
+        <div className="banner">
+        <div className="banner-container">
+              <div className="techInfo">
+                New Gadgets 
+                <br />
+                Big discount
+              </div>
+              <p className="discount">Save 50% on your first purchase</p>
 
-<div className="welcome">
-    <img className="img-settings" src={image} alt="img here"/>
- 
-    Welcome to the <span className="logo-bold">Classy Store!</span>
+              <button className="shopNow">Shop now</button>
+              </div>
 
-    <div className="greeting">Exciting Products, Exciting Deals, Exciting Discounts!!</div>
+              <img src={tech}  alt="tech"/>
+        </div>
 
-    <button className="explore">Explore</button>
+        <div className="flex badgeCardCenter">
+          {
+            badgeData.map((el, i)=> {
+              return(
+                <Badge 
+                icon = {el.icon}
+                content = {el.content} 
+                />
+              )
+            })
+          }
+        </div>
 
-    <div className="comment">Made with 💖 by Akash</div>
-</div>
+          <div className='flex features '>
+          Featured Categories
+          </div>
 
+          <div className="flex featCardCenter">
+
+            
+          {
+            featuredCardData.map((el, i )=>{
+              console.log(el,i);
+              
+              return(
+                <FeaturedCard
+
+                  cardBg = {
+                    i%2 === 0 ? "": "pink"
+                  }
+                
+                 image={el.image}
+                  name={el.name} />
+            )
+            })
+          }
+          
+          </div>
+
+          <Footer />
 
     </>
-);
-
+  )
 }
 
-export default MainPage;
+export default HomePage;

@@ -1,0 +1,26 @@
+
+
+
+:root{
+    --badge-color: #fdf0ac;
+}
+
+.small-badge{
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--badge-color);
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 2rem;
+    color: black;
+    border-radius: 10px;
+}
+
+.small-badge i{
+    font-size: 2rem;
+    margin-right: 12px;
+}
