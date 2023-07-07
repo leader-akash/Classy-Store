@@ -48,19 +48,26 @@
 
 .banner-container .shopNow{
     margin-top: 1.3rem;
+    text-align: center;
     background-color: var(--button);
     border: none;
-    color: white;
+    /* color: white !important; */
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     border:  2px solid transparent;
 } 
 
+.shop-link{
+    color: white;
+    padding: 0;
+}
+
 .banner-container .shopNow:hover{
     /* margin-top: 1.2rem; */
     background-color: var(--button-fade);
     /* outline: white; */
+    color:black ;
     border: 2px solid white;
 }
 
