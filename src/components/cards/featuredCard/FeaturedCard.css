@@ -66,6 +66,12 @@
     cursor: pointer;
     font-weight: 600;
     margin-bottom: 15px;
+    /* padding: 0; */
+}
+
+.view-link{
+    padding: 0 !important;
+    color: white;
 }
 
 .featured-card .view-deal:hover{

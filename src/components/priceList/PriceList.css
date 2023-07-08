@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #f8cb46;
+    --background-color: #fce98c;
+    --footer-color: #444654;
+    --feature-card: #fdf9d2;
+    --feature-card-pink: #FDEFEA;
+    font-family: 'Roboto Slab', serif;
+    --button: #1CC51C;
+    --button-fade: #13da13;
+    --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.price-container{
+    width: 20rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    border: solid 1px var(--button);
+    margin-right: 4rem;
+    margin-bottom: 3rem;
+}
+
+.price-detail{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.price-description{
+    box-shadow: var(--box-shadow);
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    padding:0.4rem ;
+}
+
+.p-tag{
+        font-size: 18px;
+        margin-bottom: 5px;
+}
+.price-total{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0.6rem 0;
+}
+
+.paynow{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 18rem;
+    margin-top: 1.5rem;
+    background-color: var(--background-color);
+    border: solid 1px green;
+}
+
+.paynow:hover{
+    background-color: var(--primary-color);
+
+}
+
+
+
+
+
+
+
+

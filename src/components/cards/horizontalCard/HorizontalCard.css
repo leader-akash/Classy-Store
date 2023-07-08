@@ -1,0 +1,63 @@
+
+:root {
+    --primary-color: #f8cb46;
+    --background-color: #fce98c;
+    --feature-card: #fdf9d2;
+    --feature-card-pink: #FDEFEA;
+    font-family: 'Roboto Slab', serif;
+    --button: #1CC51C;
+    --button-fade: #13da13;
+    --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.card-container-horiz{
+    box-shadow: var(--box-shadow);
+    height: 12.5rem;
+    width: 29.5rem;
+    margin-bottom: 5rem;
+    margin-left: 2rem;
+}
+
+.card-button-horiz {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    align-items: center;
+}
+
+
+.card-price-horiz{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 1.3rem;
+
+}
+
+.count-item{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+
+.dec-btn{
+    font-size: 25px;
+    padding: 0 !important;
+    width: 30px !important;
+    /* height: 30px !important; */
+}
+.inc-btn{
+    font-size: 25px;
+    padding: 0 !important;
+    width: 30px !important;
+    /* height: 28px !important; */
+    text-align: center;
+}
+
+.fix-count{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 1rem;
+}
