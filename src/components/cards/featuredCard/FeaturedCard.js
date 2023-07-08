@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FeaturedCard.css";
-import headphones from "../../../assets/images/headphone.png"
+import {Link} from "react-router-dom";
 
 const FeaturedCard = ({image, name, cardBg}) => {
   return (
@@ -8,7 +8,7 @@ const FeaturedCard = ({image, name, cardBg}) => {
         <div className={`featured-card ${cardBg}`}>
             <img src={image} alt="img" /> 
             <div className ="items">{name}</div>
-            <button className="view-deal">View Deals</button>
+            <button className="view-deal"><Link className='view-link' to="/product">View Deals</Link></button>
         </div>
     </>
   )

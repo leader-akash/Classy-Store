@@ -1,0 +1,75 @@
+
+:root {
+    --primary-color: #f8cb46;
+    --background-color: #fce98c;
+    --feature-card: #fdf9d2;
+    --feature-card-pink: #FDEFEA;
+    font-family: 'Roboto Slab', serif;
+    --button: #1CC51C;
+    --button-fade: #13da13;
+    --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-container1{
+    border: solid 1px transparent;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    margin-left: 1rem;
+    height: 20rem;
+    width: 13rem !important;
+}
+
+.card-container1:hover{
+    border: solid 1px var(--button-fade);
+}
+
+.add{
+    background-color: var(--button) !important;
+    border: 0.1px solid transparent !important;  
+}
+
+.add:hover{
+    background-color: var(--button-fade) !important;
+    border:  0.1px  solid white !important;
+}
+
+.like-heart:hover{
+    font-size: 14px ;
+}
+
+.card-image{
+    width: 210px !important;
+    height: 170px;
+    margin-left: 15px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info1{
+    height: 3rem !important;
+}
+
+.card-action{
+  
+    align-items: center;
+}
+
+.rating{
+    background-color: var(--background-color);
+    display: inline-block;
+    color: black !important;
+    margin-left: 8px;
+    padding: 1px 3px;
+}
+
+.card-price1{
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 1rem 0 0.1rem 1.5rem !important;
+}
+
+.fa-star{
+    color:coral;
+}

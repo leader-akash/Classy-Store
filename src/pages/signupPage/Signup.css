@@ -11,3 +11,7 @@
 .sign-button:hover{
     background-color: var(--primary-two) !important;
 }
+
+.signup-form{
+  margin-top: 8rem;
+}

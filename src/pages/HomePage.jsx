@@ -7,6 +7,8 @@ import { featuredCardData } from '../data/featuredCard.data';
 import { badgeData } from '../data/badge.data';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
+import Card from '../components/cards/card/Card';
+import { cardData } from '../data/card.data';
 
  const HomePage = () => {
   return (
@@ -65,7 +67,29 @@ import { Link } from 'react-router-dom';
           
           </div>
 
-          <Footer />
+          <div className='popular '>
+          Popular Purchases
+          </div>
+          <div className='flex cardCenter'>
+           { cardData.map((el,i) => {
+              return (
+                <Card 
+
+                  image={el?.image}
+                  description={el?.description}
+                  price={el?.price}
+                  marketPrice={el?.marketPrice}
+                  label={el?.label}
+                  labelStyle={el?.labelStyle}
+                  rating={el?.rating}
+                  category={el?.category}
+
+                 />
+              )
+            })}
+          </div>
+
+          
 
     </>
   )

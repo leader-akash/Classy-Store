@@ -19,11 +19,11 @@
 }
 
 .nav-two-container {
-  height: 10vh;
+  height: 4rem;
   position: fixed;
   top: 0;
-  /* display: flex;
-  justify-content: space-around; */
+  z-index: 100;
+
 }
 
 .logo {
@@ -73,11 +73,18 @@
   padding: 0;
 }
 
-
-
 span i {
   cursor: pointer;
 }
+
+.addtocart-badge:hover{
+  color: black !important;
+}
+
+.wishlist-badge:hover{
+  color: black !important;
+}
+
 
 
 /* Media Queries for Responsiveness */
