@@ -56,10 +56,11 @@
     border-radius: 5px;
     cursor: pointer;
     border:  2px solid transparent;
+    color: white;
 } 
 
 .shop-link{
-    color: white;
+    color: white !important;
     padding: 0;
 }
 
@@ -67,7 +68,7 @@
     /* margin-top: 1.2rem; */
     background-color: var(--button-fade);
     /* outline: white; */
-    color:black ;
+    color:white ;
     border: 2px solid white;
 }
 

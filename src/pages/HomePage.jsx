@@ -22,7 +22,7 @@ import { cardData } from '../data/card.data';
               </div>
               <p className="discount">Save 50% on your first purchase</p>
 
-              <button className="shopNow"><Link className="shop-link" to="/product">Shop now</Link></button>
+              <Link className="shop-link" to="/product"><button className="shopNow">Shop now</button></Link>
               </div>
 
               <img src={tech}  alt="tech"/>
