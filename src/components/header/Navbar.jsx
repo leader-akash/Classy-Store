@@ -6,7 +6,7 @@ const Navbar = () => {
 
     return (
         <div className="nav-two-container">
-            <div className="logo"><Link className="logo-hover" to="/">Classy Store</Link></div>
+            <Link className="logo-hover" to="/"><div className="logo">Classy Store</div></Link>
             <div class="search-bar">
                 <input className="search-input" type="text" placeholder="Search classy-store.netlify.app" />
                 <i className="fa-solid fa-magnifying-glass "></i>
@@ -28,9 +28,9 @@ const Navbar = () => {
                 </span>
                 </Link>
             </div>
-            <button className="sign-in"><Link className="signin-link" to="/login">
+            <Link className="signin-link" to="/login"><button className="sign-in">
                 {/* <i className="fa-regular fa-user"></i> */}
-                Login </Link></button>
+                Login</button> </Link>
 
         </div>
     );

@@ -20,6 +20,8 @@
     background-color: var(--feature-card);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
     cursor: pointer;
     /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
@@ -36,6 +38,11 @@
     box-shadow: var(--box-shadow-1);
 }
 
+/* .featured-card{
+    display: flex;
+    justify-content: center;
+} */
+
 .featured-card .items{
     font-size: 18px;
     font-weight: 600;
@@ -47,7 +54,7 @@
     width: 185px;
     height: 130px;
     margin-top: 15px;
-    margin-left: 15px;
+    /* margin-left: 10px; */
     /* display: flex;
     justify-content: center; */
     text-align: center;
