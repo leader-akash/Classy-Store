@@ -16,7 +16,7 @@ const Card = ({image, description, price, marketPrice, label, labelStyle, rating
                     <div className="card-price1">
                         <div style={{ color: 'red', fontWeight: ' bold', fontSize: '16px', paddingRight: '5px' }}>{price}</div>
                         <div style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
-                        <div className="rating">{rating}<i class="fa-solid fa-star"></i></div>
+                        <div className="rating-section">{rating}<i class="fa-solid fa-star"></i></div>
                     </div>
                     <div className="card-button1 card-action">
                         <button className="add">Add to Cart</button>

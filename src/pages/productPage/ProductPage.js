@@ -20,6 +20,8 @@ const ProductPage = () => {
               marketPrice={el.marketPrice}
               label={el.label}
               labelStyle={el.labelStyle}
+              rating={el.rating}
+              category={el.category}
              />
             
           )

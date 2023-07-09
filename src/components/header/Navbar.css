@@ -8,9 +8,11 @@
 :root {
   --primary-color: #f8cb46;
   font-family: 'Roboto Slab', serif;
-
+  --background-color: #fce98c;
+  font-family: 'Roboto Slab', serif;
+  --button: #1CC51C;
+  --button-fade: #13da13;
 }
-
 
 
 
@@ -64,6 +66,13 @@
   margin-bottom: 0;
   width: 107px;
   color:white !important;
+  background-color: var(--button);
+  border: solid 0.1px transparent;
+}
+
+.sign-in:hover{
+  background-color: var(--button-fade);
+  border: solid 0.1px white;
 }
 
 .sign-in .signin-link{

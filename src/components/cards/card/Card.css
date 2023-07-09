@@ -56,7 +56,7 @@
     align-items: center;
 }
 
-.rating{
+.rating-section{
     background-color: var(--background-color);
     display: inline-block;
     color: black !important;
