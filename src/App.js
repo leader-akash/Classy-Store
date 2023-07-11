@@ -23,7 +23,7 @@ function App() {
       <Route path="/addtocart" element={<AddToCart />} />
     </Routes>
 
-    <Footer />
+    <Footer />  
    </>
     
   );

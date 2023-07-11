@@ -1,8 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Sidebar.css"
 
 
-const Sidebar = () => {
+const Sidebar = ({filterProducts, filterRatings, categories}) => {
+
+    // const [selectedCategories, setSelectedCateo]
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
+    const handleClick = (e) => {
+        const selectedCategory = e.target.value;
+        const updatedCategories = [...selectedCategories];
+     
+        if (e.target.checked) {
+          updatedCategories.push(selectedCategory);
+        } else {
+          const index = updatedCategories.indexOf(selectedCategory);
+          if (index !== -1) {
+            updatedCategories.splice(index, 1);
+          }
+        }
+     
+        setSelectedCategories(updatedCategories);
+        filterProducts(updatedCategories);
+    }
+
+    //  rating 
+    
+    const handleRating = (e) => {
+        if(e.target.checked)
+        filterRatings(e.target.value);
+        else {
+            filterRatings("")
+        }
+    }
+
+    // const handleRating = (e) => {
+    //     const selectedRating = e.target.value;
+
+    //     if(e.target.checked){
+    //         filterRatings(selectedRating);
+    //     }
+    //     else {
+    //         filterRatings("")
+    //     }
+    //   }
+
+    // const handleClick = (e) => {
+    //     // const category =[mobiles, laptop, headphone,camera, games]
+    //     if(e.target.checked)
+    //     filterProducts(e.target.value);
+    //     else {
+    //         filterProducts("")
+    //     }
+
+    // }
+
+   
+
+    
   return (
     <>
         <div className="sidebar-section">
@@ -12,27 +67,27 @@ const Sidebar = () => {
                     <ul className="category-list">
                         <li className='cat-list-item'>
                             <label className="cat-label">
-                            <input className="label-padding" type="checkbox" value="laptop" />
+                            <input className="label-padding" type="checkbox" value="laptop" onClick={handleClick} />
                             Laptops</label>
                         </li>
                         <li className='cat-list-item'>
                             <label className="cat-label">
-                            <input className="label-padding" type="checkbox" value="Mobiles" />
+                            <input className="label-padding" type="checkbox" value="mobiles" onClick={handleClick} />
                             Mobiles</label>
                         </li>
                         <li className='cat-list-item'>
                             <label className="cat-label">
-                            <input className="label-padding" type="checkbox" value="headphone" />
+                            <input className="label-padding" type="checkbox" value="headphone" onClick={handleClick}/>
                             Headphone</label>
                         </li>
                         <li className='cat-list-item'>
                             <label className="cat-label">
-                            <input className="label-padding" type="checkbox" value="camera" />
+                            <input className="label-padding" type="checkbox" value="camera" onClick={handleClick} />
                             Camera</label>
                         </li>
                         <li className='cat-list-item'>
                             <label className="cat-label">
-                            <input className="label-padding" type="checkbox" value="games" />
+                            <input className="label-padding" type="checkbox" value="games"  onClick={handleClick}/>
                             Games</label>
                         </li>
                     </ul>
@@ -72,23 +127,23 @@ const Sidebar = () => {
                     <li className='cat-list-item'>
                     
                             <label for="4-star" className="cat-label">
-                            <input id="4-star" className="label-padding" type="radio" name="rating" value="4-star" />
+                            <input id="4-star" className="label-padding" type="radio" name="rating" value="4" onClick={handleRating}/>
                             4 Star & above
                             </label>
                     </li>
                     <li className='cat-list-item'>
                             <label for="3-star" className="cat-label">
-                            <input id="3-star" className="label-padding" type="radio" name="rating" value="3-star" />
+                            <input id="3-star" className="label-padding" type="radio" name="rating" value="3" onClick={handleRating}/>
                             3 Star & above</label>
                     </li>
                     <li className='cat-list-item'>
                             <label for="2-star" className="cat-label">
-                            <input id="2-star" className="label-padding" type="radio" name="rating" value="2-star" />
+                            <input id="2-star" className="label-padding" type="radio" name="rating" value="2" onClick={handleRating}/>
                             2 Star & above</label>
                     </li>
                     <li className='cat-list-item'>
                             <label for="1-star" className="cat-label">
-                            <input id="1-star" className="label-padding" type="radio" name="rating" value="1-star" />
+                            <input id="1-star" className="label-padding" type="radio" name="rating" value="1" onClick={handleRating}/>
                             1 Star & above</label>
                     </li>
                 </ul>

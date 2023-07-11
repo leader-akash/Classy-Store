@@ -22,11 +22,11 @@ const Login = () => {
           <form id="loginForm">
             <div>
               <p class="form-inputs"> Email Id </p>
-              <input type="email" id="login-email" placeholder="Email" required />
+              <input type="email" id="login-email" placeholder="akash@mail.com" required />
             </div>
             <div>
               <p class="form-inputs"> Password </p>
-              <input type={isPasswordVisible ? 'text' : 'password'} id="loginPassword" placeholder="Password" required />
+              <input type={isPasswordVisible ? 'text' : 'password'} id="loginPassword" placeholder="******" required />
               <i class={` pointer-cursor far ${isPasswordVisible ? 'fa-eye' : 'fa-eye-slash'}`} id="togglePassword" style={{ marginLeft: '-30px' }}
                 onClick={handlePasswordVisible}
               ></i>
