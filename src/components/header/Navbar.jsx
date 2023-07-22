@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     return (
-        <div className="nav-two-container">
+        <div className="nav-two-container navbar-wrapper">
             <Link className="logo-hover" to="/"><div className="logo">Classy Store</div></Link>
             <div class="search-bar">
                 <input className="search-input" type="text" placeholder="Search classy-store.netlify.app" />

@@ -1,18 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@700&family=Montserrat&family=Roboto+Slab&family=Shadows+Into+Light&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --primary-color: #f8cb46;
-  font-family: 'Roboto Slab', serif;
-  --background-color: #fce98c;
-  font-family: 'Roboto Slab', serif;
-  --button: #1CC51C;
-  --button-fade: #13da13;
-}
 
 
 
@@ -20,12 +5,11 @@
   font-weight: bold;
 }
 
-.nav-two-container {
+.navbar-wrapper {
   height: 4rem;
   position: fixed;
   top: 0;
   z-index: 100;
-
 }
 
 .logo {

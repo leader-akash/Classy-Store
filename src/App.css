@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@700&family=Montserrat&family=Roboto+Slab&family=Shadows+Into+Light&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #f8cb46;
+  font-family: 'Roboto Slab', serif;
+  --background-color: #fce98c;
+  font-family: 'Roboto Slab', serif;
+  --button: #1CC51C;
+  --button-fade: #13da13;
+  --badge-color: #fdf0ac;
+  --box-shadow-1: 5px 5px 15px #0000000d;
+  --feature-card: #fdf9d2;
+  --feature-card-pink: #FDEFEA;
+}
+
+.mockman{
+  margin-top: 5rem;
+}
+
 
 .flex{
   display: flex;

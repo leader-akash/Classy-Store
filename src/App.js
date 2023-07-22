@@ -1,6 +1,6 @@
+import Mockman from "mockman-js";
 import './App.css';
-import { ReactDOM } from 'react';
-import HomePage from './pages/HomePage'
+import {HomePage} from './pages'
 import {Routes, Route } from 'react-router-dom';
 import Navbar from './components/header/Navbar';
 import ProductPage from './pages/productPage/ProductPage';
@@ -21,6 +21,7 @@ function App() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/wishlist" element={<Wishlist />} />
       <Route path="/addtocart" element={<AddToCart />} />
+      <Route path="/mockman" element={<Mockman />} />
     </Routes>
 
     <Footer />  
