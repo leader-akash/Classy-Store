@@ -16,6 +16,10 @@
   font-size: 22px;
 }
 
+a:hover{
+  color: inherit;
+}
+
 .logo >.logo-hover:hover{
   color: black;
 }
@@ -65,6 +69,14 @@
   text-decoration: none;
   /* font-size: 16px; */
   padding: 0;
+}
+
+.sign-out{
+  background-color: red;
+}
+
+.sign-out:hover{
+  background-color: #f81111;
 }
 
 span i {

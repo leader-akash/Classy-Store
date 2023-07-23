@@ -1,15 +1,5 @@
-:root {
-    --primary-color: #f8cb46;
-    --background-color: #fce98c;
-    --footer-color: #444654;
-    --feature-card: #fdf9d2;
-    --feature-card-pink: #FDEFEA;
-    font-family: 'Roboto Slab', serif;
-    --button: #1CC51C;
-    --button-fade: #13da13;
-    --box-shadow-1:  5px 5px 15px #0000000d;
-}
-  .signin-button{
+
+.signin-button{
     color: black !important;
   }
 
@@ -52,11 +42,11 @@
 
 .signin-guest{
   margin-top: 1rem;
-  background-color: #c9c3c3 !important;
+  background-color: #8d8d8d !important;
 }
 
 .signin-guest:hover{
-  background-color:#949496 !important;
+  background-color:#7a7a80 !important;
 }
 
 .new-user{
@@ -73,4 +63,23 @@
 
 .goto-signup:hover{
   color:inherit;
+}
+
+.input-box{
+  margin-top: 4px;
+}
+
+/* signup css */
+
+
+.sign-button{
+    color: black !important;
+  }
+
+.sign-button:hover{
+    background-color: var(--primary-two) !important;
+}
+
+.signup-form{
+  margin-top: 8rem;
 }

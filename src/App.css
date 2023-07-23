@@ -7,8 +7,10 @@
 
 :root {
   --primary-color: #f8cb46;
+  --primary-two: #ffd659;
   font-family: 'Roboto Slab', serif;
   --background-color: #fce98c;
+  --footer-color: #444654;
   font-family: 'Roboto Slab', serif;
   --button: #1CC51C;
   --button-fade: #13da13;
@@ -33,4 +35,8 @@
 
 input:focus{
   outline: none;
+}
+
+.Toastify__toast{
+  top: 1.5rem;
 }

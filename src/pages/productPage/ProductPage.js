@@ -3,6 +3,7 @@ import "./ProductPage.css";
 import Sidebar from '../../components/sidebar/Sidebar';
 import Card from '../../components/cards/card/Card';
 import { cardData } from '../../data/card.data';
+import ProductsItems from './sub-components/ProductItems';
  
 const ProductPage = () => {
 
@@ -50,21 +51,7 @@ const ProductPage = () => {
         filterRatings={filterRatings}
       />
       <div className='flex products-container'>
-        {products.map((el, i) => {
-          return (
-            <Card
-              key={i}
-              image={el.image}
-              description={el.description}
-              price={el.price}
-              marketPrice={el.marketPrice}
-              label={el.label}
-              labelStyle={el.labelStyle}
-              rating={el.rating}
-              category={el.category}
-            />
-          );
-        })}
+        <ProductsItems />
       </div>
     </div>
   );
