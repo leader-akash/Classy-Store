@@ -44,7 +44,7 @@ const Navbar = () => {
             </Link>
          </div>
          <div className="icon-setting2">
-            <Link className="addtocart-badge" to="./addtocart">
+            <Link className="addtocart-badge" to="./cart">
                <span className="badge-icon">
                   <span className="badge blue">0</span>
                   <i className="fa-solid fa-cart-shopping " ></i>

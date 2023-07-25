@@ -1,0 +1,51 @@
+import React, { useEffect, useState } from 'react';
+import "./Cart.css"
+import {Link} from 'react-router-dom';
+import shopcart from "../../assets/images/shopcart.png"
+import HorizontalCard from '../../components/cards/horizontalCard/HorizontalCard';
+import PriceList from '../../components/priceList/PriceList';
+import { useUser } from 'contexts/user-context';
+import axios from 'axios';
+import CartItems from './sub-componets/CartItems';
+
+
+const Cart = () => {
+
+  const {getToken} = useUser();
+
+  useEffect(()=>{
+
+    axios.get(`/api/user/cart`, {
+      headers : {
+        authorization: getToken
+      }
+    })
+    .then((res)=>{
+      console.log("added", res.data.cart);
+    })
+    .catch((err)=>{
+      console.log("addError", err);
+    })
+
+  },[])
+  
+    return (
+        <>
+        <div className="shopcart-container">
+        <div className="shopcart">Your cart is empty</div>
+        <img className='shopcart-img' src={shopcart} alt="shopcart" />
+        <br />
+        <Link className='goto-productpage shop-now' to="/product"><button className='shopcart-btn'>Shop now</button></Link>
+        </div>
+
+        <div className='flex cart-center'>
+        <CartItems />
+
+        <PriceList />
+        </div>
+        </>
+      )
+}
+
+export default Cart
+
