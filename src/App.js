@@ -10,7 +10,7 @@ import Footer from './components/footer/Footer';
 import Signup from './pages/auth/Signup';
 import Login from './pages/auth/Login';
 import Wishlist from './pages/wishList/Wishlist';
-import AddToCart from './pages/addToCart/AddToCart';
+import Cart from "./pages/cart/Cart";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/product" element={<ProductPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
       <ToastContainer 

@@ -12,6 +12,7 @@
 
 .price-container{
     width: 20rem;
+    height: 23rem;
     box-shadow: var(--box-shadow);
     padding: 1rem;
     border: solid 1px var(--button);

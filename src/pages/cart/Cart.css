@@ -45,6 +45,10 @@
     border: solid 2px gold;
 }
 
+.shop-now{
+    color: white;
+}
+
 .goto-productpage{
     color: white !important;
     padding: 0 !important;
