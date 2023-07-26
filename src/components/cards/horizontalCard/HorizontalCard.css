@@ -15,7 +15,7 @@
     box-shadow: var(--box-shadow);
     height: 13rem;
     width: 29.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     margin-left: 2rem;
 }
 
@@ -68,6 +68,19 @@
     height: 140px;
 }
 
-.label-horiz{
-    /* background-color: inherit; */
+.label-padding{
+    padding: 1px 5px; 
+}
+
+.move-cart{
+    display: flex;
+    justify-content: center;
+}
+
+.remove-wishlist{
+    background-color: #1287e7 !important;
+}
+
+.remove-wishlist:hover{
+    background-color: #0b7dda !important;
 }

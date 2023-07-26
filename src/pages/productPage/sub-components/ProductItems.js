@@ -14,7 +14,6 @@ const ProductsItems = () => {
             setCardItem(res.data.products);
         })
 
-
     },[])
 
 

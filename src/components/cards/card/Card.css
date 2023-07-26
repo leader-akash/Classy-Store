@@ -73,3 +73,15 @@
 .fa-star{
     color:coral;
 }
+
+.goto-cart{
+    background-color: #1287e7 !important;
+}
+
+.goto-cart:hover{
+    background-color: #0b7dda !important;
+}
+
+.red-heart{
+    color: red;
+}

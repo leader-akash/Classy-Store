@@ -1,15 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Card.css"
 import { useUser } from 'contexts/user-context';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Card = ({ image, description, price, marketPrice, label, labelStyle, rating }) => {
 
-//   const [isProductAdded, setIsProductAdded] = useState([]);
+    const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
+    const [isProductAddedToWishlist, setIsProductAddedToCartToWishList] = useState(false);
 
+
+    //   useEffect(()=>{
+
+
+    //   },[])
+    
 
     const { getToken } = useUser();
+
+    const navigate = useNavigate();
+
     const product = {
         image: image,
         description: description,
@@ -20,9 +31,8 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
         rating: rating
     }
     const hanleAddToCart = () => {
-
+        if(getToken){
         console.log(getToken, "getTOken in cart")
-
         axios.post(`/api/user/cart`, {
             product
         }, {
@@ -32,11 +42,43 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
         }
         ).then((res) => {
             console.log("cart", res.data.cart);
-            toast.success("Added to Cart")
+            setIsProductAddedToCart(true)
+
+            toast.success("Added to Cart 🎉")
         })
             .catch((error) => {
                 console.log("card-error", error)
             })
+        }
+        else{
+            navigate("/login")
+        }
+    }
+
+
+    const handleWishList = () => {
+        if(getToken){
+        axios.post(`/api/user/wishlist`,
+            { product }
+            , {
+                headers: {
+                    authorization: getToken
+                }
+            })
+            .then((res) => {
+                console.log("wishlist-item", res.data.wishlist);
+                toast.success("Added to WishList 🎉")
+                setIsProductAddedToCartToWishList(true)
+
+            })
+            .catch((err) => {
+                console.log("wishlist-err", err);
+            })
+            
+        }
+        else{
+            navigate("/login")
+        }
 
     }
 
@@ -54,12 +96,33 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                     <div style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
                     <div className="rating-section">{rating}<i class="fa-solid fa-star"></i></div>
                 </div>
-                <div className="card-button1 card-action">
-                    <button className="add" onClick={hanleAddToCart}>
 
-                        Add to Cart
-                    </button>
-                    <div className="like like-heart "><i className="far fa-heart fa-2x"></i></div>
+                <div className="card-button1 card-action">
+                    {
+
+                        isProductAddedToCart ?
+                            <Link to="/cart" >
+                                <button className="add goto-cart" >
+
+                                    Go to Cart
+                                </button>
+                            </Link>
+                            :
+
+                            <button className="add" onClick={hanleAddToCart}>
+
+                                Add to Cart
+                            </button>
+                    }
+                    <div className="like like-heart ">
+                        {
+                            isProductAddedToWishlist ?
+                                <i className="fa fa-heart fa-2x red-heart" onClick={handleWishList}></i>
+                                :
+                                <i className="far fa-heart fa-2x" onClick={handleWishList}></i>
+                        }
+                    </div>
+
                 </div>
             </div>
         </>

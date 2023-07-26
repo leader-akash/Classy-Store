@@ -6,14 +6,28 @@
 }
 
 .navbar-wrapper {
-  height: 4rem;
+  height: 3rem;
   position: fixed;
   top: 0;
   z-index: 100;
+  display: flex !important;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.button-right{
+  display: flex;
+  justify-content: end;
 }
 
 .logo {
   font-size: 22px;
+}
+
+.logo-hover{
+  display: flex;
+  justify-content: left !important;
+  margin-left: 1rem;
 }
 
 a:hover{
@@ -103,7 +117,7 @@ span i {
     position: fixed;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   
   .logo {
@@ -162,7 +176,7 @@ span i {
       position: fixed;
       top: 0;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
     
     .logo {
