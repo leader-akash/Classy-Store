@@ -23,6 +23,10 @@
     margin-bottom: 1.5rem;
 }
 
+.shop-now{
+    color: white !important; 
+}
+
 .wishlist-img{
     margin-top: 1rem;
     width: 30rem;
@@ -38,6 +42,7 @@
     margin-top: 1rem;
     font-size: 1.3rem;
     border-radius: 5px;
+    color: white;
 }
 
 .wishlist-btn:hover{
@@ -49,3 +54,11 @@
     color: white !important;
     padding: 0 !important;
 }
+
+
+.wishlist-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+

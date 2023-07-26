@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import "./Cart.css"
 import {Link} from 'react-router-dom';
 import shopcart from "../../assets/images/shopcart.png"
-import HorizontalCard from '../../components/cards/horizontalCard/HorizontalCard';
 import PriceList from '../../components/priceList/PriceList';
 import { useUser } from 'contexts/user-context';
 import axios from 'axios';
@@ -39,7 +38,9 @@ const Cart = () => {
         </div>
 
         <div className='flex cart-center'>
+        <div className='horiz-card-alignment'>
         <CartItems />
+        </div>
 
         <PriceList />
         </div>

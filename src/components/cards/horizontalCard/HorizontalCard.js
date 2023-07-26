@@ -1,15 +1,50 @@
-import React, { useEffect, useState } from 'react'
+import React, {useState} from 'react'
 import "./HorizontalCard.css"
-import laptop from "../../../assets/images/apple.png"
+import axios from 'axios'
+import { useUser } from 'contexts/user-context';
+import { toast } from 'react-toastify';
 
 
 const HorizontalCard = ({ image, description, price, marketPrice, label, labelStyle, rating }) => {
 
+    const [isProductAdded, setIsProductAdded] = useState(false);
+
+    const { getToken } = useUser();
+    const product = {
+        image: image,
+        description: description,
+        price: price,
+        marketPrice: marketPrice,
+        label: label,
+        labelStyle: labelStyle,
+        rating: rating
+    }
+    
+    const handleMoveToWishList = () => {
+        setIsProductAdded(getToken)
+        axios.post(`/api/user/wishlist`, {
+            product
+        },{
+            headers : {
+                authorization: getToken
+            }
+        }
+        )
+        .then((res)=>{
+            toast.success("Added to Cart 🎉")
+        })
+            .catch((error) => {
+                console.log("card-error", error)
+            })
+
+        }
+
+    
 
     return (
         <div className="card-container-horiz">
             <div className="card-header">
-                <div className="badge green card-badge-horiz label-horiz">{label}</div>
+                <div className="badge green card-badge-horiz label-horiz label-padding">{label}</div>
                 <div className="card-cancel-horiz">X</div>
             </div>
             <div className="card-padding">
@@ -30,10 +65,14 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
                         <div style={{fontSize: '13px'}}><strike>{marketPrice}</strike></div>
                         <div className="rating">{rating}<i class="fa-solid fa-star"></i></div>
                     </div>
-                    <div className="card-button-horiz">
-                        <button className="add">Add to Cart</button>
-                        <div className="like"><i className="far fa-heart fa-2x"></i></div>
-                        
+                    <div className="card-button-horiz move-cart">
+                        {/* <div className="like"><i className="far fa-heart fa-2x"></i></div> */}
+                    {
+                        !isProductAdded ?
+                        <button className="add " onClick={handleMoveToWishList}>Move to Wishlist</button>
+                        :
+                        <button className="add remove-wishlist" >Remove from Wishlist</button>
+                    } 
                     </div>
                 </div>
             </div>
