@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./Auth.css";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useUser } from 'contexts/user-context';
 
 
 const Signup = () => {
@@ -14,7 +15,7 @@ const Signup = () => {
     const [passwordVal, setPasswordVal] = useState();
     const [confirmPasswordVal, setConfirmPasswordVal] = useState();
     const [isPasswordMatch, setIsPasswordMatch] = useState(false);
-
+    const {setGetToken} = useUser();
 
     const handleName = (e) => {
         setNameVal(e.target.value);
@@ -30,8 +31,6 @@ const Signup = () => {
 
     const handleConfirmPassword = (e) => {
         setConfirmPasswordVal(e.target.value);
-
-
     }
 
     const handleSubmit = (e) => {
@@ -49,6 +48,7 @@ const Signup = () => {
                     console.log("signup", res)
                     localStorage.setItem("signup token", res.data?.encodedToken);
                     localStorage.setItem("singup Info", JSON.stringify(res.data?.createdUser));
+                    setGetToken(res.data?.encodedToken)
                     toast.success(`Hi ${nameVal}, Welcome to Classy Store 💖`);
                     navigate("/")
                 })

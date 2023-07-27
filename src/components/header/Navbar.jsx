@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link, useSearchParams } from "react-router-dom";
 import { useUser } from "contexts/user-context";
+import { useFilter } from "contexts/filter-context";
 const Navbar = () => {
    const { getToken, setGetToken } = useUser();
+
+   const {searchItem, setSearchItem} = useFilter();
+
    // const [isUserLoggedin, setIsUserLoggedin] = useState(false);
 
    // const tokenVal = localStorage.getItem("token");
@@ -24,6 +28,11 @@ const Navbar = () => {
       setGetToken("");
    }
 
+   const handleSearch = (e) => {
+         setSearchItem(e.target.value);
+         console.log("search", e.target.value)
+   }
+
   
    console.log("getToken", getToken)
 
@@ -32,7 +41,7 @@ const Navbar = () => {
       
          <Link className="logo-hover" to="/"><div className="logo">Classy Store</div></Link>
          <div class="search-bar">
-            <input className="search-input" type="text" placeholder="Search classy-store.netlify.app" />
+            <input className="search-input" type="text" placeholder="Search classy-store.netlify.app" onChange={handleSearch} />
             <i className="fa-solid fa-magnifying-glass "></i>
          </div>
          <div className="button-right">
