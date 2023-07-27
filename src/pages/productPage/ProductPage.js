@@ -43,17 +43,21 @@ const ProductPage = () => {
   };
  
   return (
-    <div className='flex'>
+    <>
+    <div className=' flex product-section'>
+    <div className='product-sidebar'>
       <Sidebar
         selectedCategories={selectedCategories}
         selectedRating={selectedRating}
         filterProducts={filterProducts}
         filterRatings={filterRatings}
       />
+       </div>
       <div className='flex products-container'>
         <ProductsItems />
       </div>
-    </div>
+      </div>
+   </>
   );
 };
  

@@ -5,6 +5,8 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { makeServer } from "./server";
 import { UserProvider } from 'contexts/user-context';
+import { FilterProvider } from 'contexts/filter-context';
+import { ProductProvider } from 'contexts/products-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,8 +18,13 @@ root.render(
   <React.StrictMode>
     <Router>
       <UserProvider>
+      <ProductProvider>
+      <FilterProvider>
         <App />
+      </FilterProvider>
+      </ProductProvider>
       </UserProvider>
+        
     </Router>
   </React.StrictMode>
 );

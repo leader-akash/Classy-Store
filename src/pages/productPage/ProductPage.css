@@ -2,6 +2,12 @@
 
 .products-container{
     margin-top: 5.5rem;
+    display: flex;
     flex-wrap: wrap;
     margin-left: 2rem;
+    /* margin-left: 210px; */
+}
+
+.product-sidebar{
+    width: 220px;
 }

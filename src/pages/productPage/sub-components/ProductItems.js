@@ -1,25 +1,33 @@
 import axios from 'axios'
 import Card from 'components/cards/card/Card'
+import { useFilter } from 'contexts/filter-context';
+import { useProduct } from 'contexts/products-context';
 import React, { useEffect, useState } from 'react'
 
 const ProductsItems = () => {
 
   const [cardItem, setCardItem] = useState([]);
 
-    useEffect(()=>{
+  const {allProducts} = useProduct();
 
-        axios.get("/api/products")
-        .then((res)=>{
-            console.log("products card", res);
-            setCardItem(res.data.products);
-        })
+  const {filteredData} = useFilter();
 
-    },[])
+  console.log("allProducts", filteredData)
+
+    // useEffect(()=>{
+
+    //     axios.get("/api/products")
+    //     .then((res)=>{
+    //         console.log("products card", res);
+    //         setCardItem(res.data.products);
+    //     })
+
+    // },[])
 
 
   return (
     <>
-        {cardItem.map((el, i) => {
+        {filteredData?.map((el, i) => {
           return (
             <Card
               key={i}

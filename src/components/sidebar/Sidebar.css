@@ -11,6 +11,17 @@
     --box-shadow-1:  5px 5px 15px #0000000d;
 }
 
+.sidebar-section{
+    /* position: fixed;
+    overflow-y: scroll;
+    height: 100vh; */
+    /* height: calc(100vh - 8.125rem); */
+}
+
+.sidebar-section::-webkit-scrollbar {
+    display: none;
+  }
+
 .sidebar-container{
     width: 220px;
     background-color: var(--feature-card);
@@ -25,6 +36,9 @@
     height: calc(100vh - 8.125rem);
     top:4rem;
     bottom: 0; */
+    /* position: sticky; */
+    /* overflow-y: scroll;
+    height: calc(100vh - 8.125rem); */
 }
 
 .categories{

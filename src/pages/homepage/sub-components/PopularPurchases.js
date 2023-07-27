@@ -1,24 +1,26 @@
 import axios from 'axios'
 import Card from 'components/cards/card/Card';
+import { useProduct } from 'contexts/products-context';
 import React, { useEffect, useState } from 'react'
 
 const PopularPurchases = () => {
 
     const [productData, setProductData] = useState([]);
+    const {allProducts} = useProduct();
 
-   useEffect(()=>{
-    axios.get("/api/products")
-    .then((res)=>{
-        console.log("product", res)
-        setProductData(res.data.products);
-    })
-   }, [])
+  //  useEffect(()=>{
+  //   axios.get("/api/products")
+  //   .then((res)=>{
+  //       console.log("product", res)
+  //       setProductData(res.data.products);
+  //   })
+  //  }, [])
 
    console.log("card", productData)
 
   return (
     <>
-        {productData.slice(0,8).map((el, i) => {
+        {allProducts?.slice(0,8).map((el, i) => {
           return (
             <Card
 
