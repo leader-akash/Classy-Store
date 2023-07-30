@@ -21,13 +21,6 @@ const ProductProvider = ({ children }) => {
 
 
     useEffect(() => {
-        // axios.get(`/api/products`)
-        // .then((res)=>{
-        //     setAllProducts(res.data?.products);
-        // })
-        // .catch((err)=>{
-        //     console.log("prod-err", err)
-        // })
         getProducts()
     }, []);
 

@@ -8,7 +8,7 @@ const FeaturedCard = ({image, name, cardBg}) => {
         <div className={`featured-card ${cardBg}`}>
             <img src={image} alt="img" /> 
             <div className ="items">{name}</div>
-            <Link className='view-link' to="/product"><button className="view-deal">View Deals</button></Link>
+            <Link className='view-link' to="/products"><button className="view-deal">View Deals</button></Link>
         </div>
     </>
   )

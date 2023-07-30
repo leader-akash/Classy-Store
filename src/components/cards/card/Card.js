@@ -4,24 +4,23 @@ import { useUser } from 'contexts/user-context';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from 'contexts/cart-context';
 
-const Card = ({ image, description, price, marketPrice, label, labelStyle, rating }) => {
+const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, id }) => {
 
     const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
     const [isProductAddedToWishlist, setIsProductAddedToCartToWishList] = useState(false);
 
-
-    //   useEffect(()=>{
-
-
-    //   },[])
-    
-
     const { getToken } = useUser();
+
+    // const {isInCart, cartData} = useCart();
+
+    // const {state, dispatch} = useCart();
 
     const navigate = useNavigate();
 
     const product = {
+        _id: id,
         image: image,
         description: description,
         price: price,
@@ -32,7 +31,7 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
     }
     const hanleAddToCart = () => {
         if(getToken){
-        console.log(getToken, "getTOken in cart")
+   
         axios.post(`/api/user/cart`, {
             product
         }, {
@@ -41,8 +40,12 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
             }
         }
         ).then((res) => {
-            console.log("cart", res.data.cart);
-            setIsProductAddedToCart(true)
+   
+            // if(isInCart(id))
+            setIsProductAddedToCart(false)
+            // else{
+                setIsProductAddedToCart(true);
+            // }
 
             toast.success("Added to Cart 🎉")
         })
@@ -66,7 +69,7 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                 }
             })
             .then((res) => {
-                console.log("wishlist-item", res.data.wishlist);
+        
                 toast.success("Added to WishList 🎉")
                 setIsProductAddedToCartToWishList(true)
 

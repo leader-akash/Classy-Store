@@ -26,7 +26,7 @@ const HomePage = () => {
           </div>
           <p className="discount">Save 50% on your first purchase</p>
 
-          <Link className="shop-link" to="/product"><button className="shopNow">Shop now</button></Link>
+          <Link className="shop-link" to="/products"><button className="shopNow">Shop now</button></Link>
         </div>
 
         <img src={tech} alt="tech" />

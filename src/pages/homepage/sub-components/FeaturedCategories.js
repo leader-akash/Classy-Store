@@ -10,15 +10,13 @@ const FeaturedCategories = () => {
   useEffect(() =>{
     axios.get("/api/categories")
     .then((res)=>{
-      console.log('ytyr7tt', res);
+    
       setFeaturedData(res.data.categories);
     })
   }, []  )
-console.log("featuredData", featuredData);
   return (
     <>
     {featuredData.map((el, i) => {
-        console.log(el, i);
       return (
       <FeaturedCard
         cardBg={

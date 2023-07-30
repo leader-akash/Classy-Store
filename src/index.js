@@ -7,6 +7,7 @@ import { makeServer } from "./server";
 import { UserProvider } from 'contexts/user-context';
 import { FilterProvider } from 'contexts/filter-context';
 import { ProductProvider } from 'contexts/products-context';
+import {CartProvider} from 'contexts/cart-context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,11 +19,13 @@ root.render(
   <React.StrictMode>
     <Router>
       <UserProvider>
+      <CartProvider>
       <ProductProvider>
       <FilterProvider>
         <App />
       </FilterProvider>
       </ProductProvider>
+      </CartProvider>
       </UserProvider>
         
     </Router>
