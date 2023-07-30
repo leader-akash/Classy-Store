@@ -39,14 +39,12 @@ const Login = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log("login", emailVal, passwordVal)
 
      axios.post(`/api/auth/login`, {
          email: emailVal,
          password: passwordVal,
      })
      .then((res) => {
-      console.log("res", res)
       localStorage.setItem("token", res?.data?.encodedToken)
       localStorage.setItem("userInfo", JSON.stringify(res?.data?.foundUser))
       setGetToken(res?.data?.encodedToken)
@@ -61,7 +59,6 @@ const Login = () => {
 
    }
 
-   // console.log("login info", isLogin)
 
    return (
       <div className='login-page'>

@@ -90,12 +90,12 @@
 }
 
 .clear-filter{
-    font-size: 14px;
+    font-size: 16px;
     background-color: rgb(235, 28, 28);
     border: none;
     color:white;
     height: 32px;
-    width: 83px;
+    width: 112x;
     text-align: center;
     display: flex;
     justify-content: center;

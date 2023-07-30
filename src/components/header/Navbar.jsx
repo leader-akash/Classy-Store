@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useUser } from "contexts/user-context";
 import { useFilter } from "contexts/filter-context";
 const Navbar = () => {
    const { getToken, setGetToken } = useUser();
 
    const {searchItem, setSearchItem} = useFilter();
+
+   const navigate = useNavigate();
+   const location = useLocation();
 
    // const [isUserLoggedin, setIsUserLoggedin] = useState(false);
 
@@ -30,18 +33,20 @@ const Navbar = () => {
 
    const handleSearch = (e) => {
          setSearchItem(e.target.value);
-         console.log("search", e.target.value)
    }
 
-  
-   console.log("getToken", getToken)
+  const handleSearchNavigation = () => {
+   if(location.pathname !== "/products"){
+      navigate("/products")
+   }
+  }
 
    return (
       <div className="nav-two-container navbar-wrapper">
       
          <Link className="logo-hover" to="/"><div className="logo">Classy Store</div></Link>
-         <div class="search-bar">
-            <input className="search-input" type="text" placeholder="Search classy-store.netlify.app" onChange={handleSearch} />
+         <div class="search-bar" onClick={handleSearchNavigation}>
+            <input className="search-input" type="search" placeholder="Search classy-store.netlify.app" onChange={handleSearch} />
             <i className="fa-solid fa-magnifying-glass "></i>
          </div>
          <div className="button-right">

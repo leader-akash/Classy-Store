@@ -8,15 +8,8 @@ const PopularPurchases = () => {
     const [productData, setProductData] = useState([]);
     const {allProducts} = useProduct();
 
-  //  useEffect(()=>{
-  //   axios.get("/api/products")
-  //   .then((res)=>{
-  //       console.log("product", res)
-  //       setProductData(res.data.products);
-  //   })
-  //  }, [])
 
-   console.log("card", productData)
+   
 
   return (
     <>

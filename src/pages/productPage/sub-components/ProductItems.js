@@ -12,17 +12,8 @@ const ProductsItems = () => {
 
   const {filteredData} = useFilter();
 
-  console.log("allProducts", filteredData)
+  console.log("filteredCategoryData", filteredData);
 
-    // useEffect(()=>{
-
-    //     axios.get("/api/products")
-    //     .then((res)=>{
-    //         console.log("products card", res);
-    //         setCardItem(res.data.products);
-    //     })
-
-    // },[])
 
 
   return (
@@ -31,6 +22,7 @@ const ProductsItems = () => {
           return (
             <Card
               key={i}
+              id={el._id}
               image={el.image}
               description={el.description}
               price={el.price}

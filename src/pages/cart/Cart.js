@@ -6,9 +6,12 @@ import PriceList from '../../components/priceList/PriceList';
 import { useUser } from 'contexts/user-context';
 import axios from 'axios';
 import CartItems from './sub-componets/CartItems';
+import { useCart } from 'contexts/cart-context';
 
 
 const Cart = () => {
+
+  const {cartData} = useCart();
 
   const {getToken} = useUser();
 
@@ -34,7 +37,7 @@ const Cart = () => {
         <div className="shopcart">Your cart is empty</div>
         <img className='shopcart-img' src={shopcart} alt="shopcart" />
         <br />
-        <Link className='goto-productpage shop-now' to="/product"><button className='shopcart-btn'>Shop now</button></Link>
+        <Link className='goto-productpage shop-now' to="/products"><button className='shopcart-btn'>Shop now</button></Link>
         </div>
 
         <div className='flex cart-center'>

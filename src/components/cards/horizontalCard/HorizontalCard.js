@@ -31,7 +31,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
         }
         )
         .then((res)=>{
-            toast.success("Added to Cart 🎉")
+            toast.success("Added to WishList 🎉")
         })
             .catch((error) => {
                 console.log("card-error", error)

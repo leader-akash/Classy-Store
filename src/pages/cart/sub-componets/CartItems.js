@@ -16,13 +16,14 @@ const CartItems = () => {
             }
         })
             .then((res) => {
-                console.log("horiz-card", res.data.cart);
                 setCartItem(res.data.cart)
             })
             .catch((err) => {
                 console.log("err-horiz", err);
             })
     }, [getToken])
+
+    
 
 
     return (

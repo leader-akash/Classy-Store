@@ -11,7 +11,7 @@ const Wishlist = () => {
     <div className="wishlist">Your wishlist is empty</div>
     <img className='wishlist-img' src={wishlist} alt="wishlist" />
     <br />
-    <Link className='goto-productpage shop-now' to="/product"><button className='wishlist-btn'>Shop now</button></Link>
+    <Link className='goto-productpage shop-now' to="/products"><button className='wishlist-btn'>Shop now</button></Link>
     </div>
     <div >
     <WishlistItems />

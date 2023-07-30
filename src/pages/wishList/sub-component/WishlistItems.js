@@ -16,7 +16,7 @@ const WishlistItems = () => {
             authorization: getToken
          }
       }).then((res) => {
-         console.log("wish-added ?", res.data.wishlist);
+
          setWishlistItem(res.data.wishlist);
       })
          .catch((err) => {
