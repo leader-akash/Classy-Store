@@ -35,17 +35,8 @@ const Navbar = () => {
    const handleSearch = (e) => {
          setSearchItem(e.target.value);
    }
-   const handleWishlistClick = () => {
-   if(!getToken){
-      navigate("/login")
-   }
-}
+  
 
-const handleCartClick = () => {
-   if(!getToken){
-      navigate("/login")
-   }
-}
 
   const handleSearchNavigation = () => {
    if(location.pathname !== "/products"){

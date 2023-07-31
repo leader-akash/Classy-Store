@@ -6,7 +6,7 @@ import WishlistItems from './sub-component/WishlistItems';
 
 const Wishlist = () => {
 
-  
+
 
   return (
     <>

@@ -3,14 +3,18 @@ import "./HorizontalCard.css"
 import axios from 'axios'
 import { useUser } from 'contexts/user-context';
 import { toast } from 'react-toastify';
+import { useWishlist } from 'contexts/wishlist-context';
 
 
-const HorizontalCard = ({ image, description, price, marketPrice, label, labelStyle, rating }) => {
+const HorizontalCard = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
 
     const [isProductAdded, setIsProductAdded] = useState(false);
+  const {addToWishlist, setAddToWishlist, wishlistData} = useWishlist();
+
 
     const { getToken } = useUser();
     const product = {
+        _id: _id,
         image: image,
         description: description,
         price: price,
@@ -21,23 +25,9 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
     }
     
     const handleMoveToWishList = () => {
-        setIsProductAdded(getToken)
-        axios.post(`/api/user/wishlist`, {
-            product
-        },{
-            headers : {
-                authorization: getToken
-            }
-        }
-        )
-        .then((res)=>{
-            toast.success("Added to WishList 🎉")
-        })
-            .catch((error) => {
-                console.log("card-error", error)
-            })
-
-        }
+    setAddToWishlist({image, description, price, marketPrice, label, labelStyle, rating, _id})
+        
+    }
 
     
 
@@ -68,10 +58,10 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
                     <div className="card-button-horiz move-cart">
                         {/* <div className="like"><i className="far fa-heart fa-2x"></i></div> */}
                     {
-                        !isProductAdded ?
-                        <button className="add " onClick={handleMoveToWishList}>Move to Wishlist</button>
-                        :
+                        wishlistData.findIndex((element)=> element._id === _id) !== -1 && getToken ?
                         <button className="add remove-wishlist" >Remove from Wishlist</button>
+                        :
+                        <button className="add " onClick={handleMoveToWishList}>Move to Wishlist</button>
                     } 
                     </div>
                 </div>

@@ -13,6 +13,7 @@ const WishlistProvider = ({children}) => {
 
     const [addToWishlist, setAddToWishlist] = useState();
     const {getToken} = useUser(); 
+    const [wishlistData, setWishlistData] = useState([]);
 
     useEffect(()=>{
         if(getToken){
@@ -32,16 +33,29 @@ const WishlistProvider = ({children}) => {
                   console.log("card-error", error)
               })
           }
-          else{
-              navigate("/login")
-          }
+        //   else{
+        //       navigate("/login")
+        //   }
       },[addToWishlist])
-    
+      
+      useEffect(()=>{
+        axios.get(`/api/user/wishlist`,{
+            headers:{
+                authorization: getToken
+            }
+        })
+        .then((res)=>{
+            setWishlistData(res.data.wishlist)
+        })
+        .catch((err)=>{
+            console.log("wisherr", err)
+        })
+      },[addToWishlist])
 
 
 
   return (
-    <WishlistContext.Provider value={{addToWishlist, setAddToWishlist}}>
+    <WishlistContext.Provider value={{addToWishlist, setAddToWishlist, wishlistData}}>
         {children}
     </WishlistContext.Provider>
   )

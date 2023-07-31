@@ -1,5 +1,6 @@
 import axios from 'axios';
 import HorizontalCard from 'components/cards/horizontalCard/HorizontalCard';
+import { useCart } from 'contexts/cart-context';
 import { useUser } from 'contexts/user-context';
 import React, { useEffect, useState } from 'react'
 
@@ -7,21 +8,22 @@ const CartItems = () => {
 
     const [cartItem, setCartItem] = useState([]);
     const { getToken } = useUser();
+     const {addToCart, cartData}= useCart();
 
-
-    useEffect(() => {
-        axios.get(`/api/user/cart`, {
-            headers: {
-                authorization: getToken,
-            }
-        })
-            .then((res) => {
-                setCartItem(res.data.cart)
-            })
-            .catch((err) => {
-                console.log("err-horiz", err);
-            })
-    }, [getToken])
+     console.log("cartData",cartData)
+    // useEffect(() => {
+    //     axios.get(`/api/user/cart`, {
+    //         headers: {
+    //             authorization: getToken,
+    //         }
+    //     })
+    //         .then((res) => {
+    //             setCartItem(res.data.cart)
+    //         })
+    //         .catch((err) => {
+    //             console.log("err-horiz", err);
+    //         })
+    // }, [getToken])
 
     
 
@@ -29,10 +31,11 @@ const CartItems = () => {
     return (
         <div>
             {
-                cartItem.map((el, i) => {
+                cartData.map((el, i) => {
                     return (
                         <HorizontalCard
                         key={i}
+                        _id ={el._id}
                             image={el.image}
                             description={el.description}
                             price={el.price}

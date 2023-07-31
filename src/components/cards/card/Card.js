@@ -11,25 +11,24 @@ const details = {
   
 }
 
-const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, id }) => {
+const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
 
   const navigate = useNavigate();
   const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
   const [isProductAddedToWishlist, setIsProductAddedToWishList] = useState(false);
-  const { addToCart, setAddToCart } = useCart();
-  const {addToWishlist, setAddToWishlist} = useWishlist();
+  const { addToCart, setAddToCart,cartData } = useCart();
+  const {addToWishlist, setAddToWishlist, wishlistData} = useWishlist();
 
   const { getToken } = useUser();
 
-  const[authToken, setAuthToken] = useState("");
-
-  useEffect(()=>{
-    setAuthToken(getToken);
-  },[])
-
 
   const handleAddtoCart = () => {
-    setAddToCart({image, description, price, marketPrice, label, labelStyle, rating, id})
+    setAddToCart({image, description, price, marketPrice, label, labelStyle, rating, _id})
+    console.log( "handleCart")
+  }
+  
+  const handleAddtoWishlist = () => {
+    setAddToWishlist({image, description, price, marketPrice, label, labelStyle, rating, _id})
   }
 
 
@@ -45,13 +44,13 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
         <div className="card-price1">
           <div style={{ color: 'red', fontWeight: ' bold', fontSize: '16px', paddingRight: '5px' }}>{price}</div>
           <div style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
-          <div className="rating-section">{rating}<i class="fa-solid fa-star"></i></div>
+          <div className="rating-section">{rating}<i class="fa-sol_ fa-star"></i></div>
         </div>
 
         <div className="card-button1 card-action">
           {
 
-            isProductAddedToCart ?
+            cartData.findIndex((element)=> element._id === _id) !== -1 && getToken ?
               <Link to="/cart" >
                 <button className="add goto-cart" >
 
@@ -59,19 +58,16 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                 </button>
               </Link>
               :
-
-
               <button className="add" onClick={handleAddtoCart}>
-
                 Add to Cart
               </button>
           }
           <div className="like like-heart ">
             {
-              isProductAddedToWishlist ?
+              wishlistData.findIndex((element)=> element._id === _id) !== -1 && getToken ?
                 <i className="fa fa-heart fa-2x red-heart"></i>
                 :
-                <i className="far fa-heart fa-2x"  onClick={()=> setAddToWishlist({image, description, price, marketPrice, label, labelStyle, rating, id })}></i>
+                <i className="far fa-heart fa-2x"  onClick={handleAddtoWishlist}></i>
             }
           </div>
 

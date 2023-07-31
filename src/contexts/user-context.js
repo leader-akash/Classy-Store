@@ -14,7 +14,7 @@ const UserProvider = ({children}) => {
 
 
   return (
-    <UserContext.Provider value={{getToken, setGetToken, isLoggedIn, setIsLoggedIn}}>
+    <UserContext.Provider value={{getToken, isLoggedIn, setIsLoggedIn, setGetToken }}>
       {children}
     </UserContext.Provider>
   )

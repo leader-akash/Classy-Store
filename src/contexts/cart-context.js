@@ -14,10 +14,13 @@ const CartProvider = ({children}) => {
       // const { allProducts, setAllProducts } = useProduct();
 
       const [addToCart, setAddToCart] = useState();
+      const [cartData, setCardData] = useState([]);
       console.log("cart", addToCart)
       const {getToken} = useUser();
 
-    //   const product = {
+      const token = localStorage.getItem("token")
+
+    //   const details = {
     //     _id: id,
     //     image: image,
     //     description: description,
@@ -29,39 +32,53 @@ const CartProvider = ({children}) => {
     // }
 
     useEffect(()=>{
-      if(getToken){
+      if(token){
    
-        axios.post(`/api/user/cart`, {
-         product: addToCart
-        }, {
+        axios.post(`/api/user/cart`
+        , {
+          product: addToCart
+         }, {
             headers: {
-                authorization: getToken
+                authorization: token
             }
         }
         ).then((res) => {
-   
+            console.log(res, "addtocart", addToCart)
+            // setCardData(res.data.cart)
             toast.success("Added to Cart 🎉")
         })
             .catch((error) => {
                 console.log("card-error", error)
             })
         }
-        else{
-            navigate("/login")
+        // else{ 
+        //     navigate("/login")
+        // }
+    },[addToCart])
+
+    useEffect(()=>{
+      axios.get(`/api/user/cart`,{
+        headers : {
+          authorization: token
         }
+      })
+      .then((res)=>{
+        console.log("addsad", res)
+        setCardData(res.data.cart)
+      })
+      .catch((err)=>{
+        console.log("cartErr", err)
+      })
     },[addToCart])
 
 
-    const handleAddtoCart = () => {
-      // if(addToCart.findIndex((el) => el._id === _id) !== -1)
-      
-    }
+
 
 
 
   return (
 
-    <CartContext.Provider value={{addToCart,setAddToCart}}>
+    <CartContext.Provider value={{addToCart,setAddToCart, cartData}}>
       {children}
     </CartContext.Provider>
   )

@@ -11,25 +11,25 @@ import { useCart } from 'contexts/cart-context';
 
 const Cart = () => {
 
-  const {cartData} = useCart();
+  // const {cartData} = useCart();
 
-  const {getToken} = useUser();
+  // const {getToken} = useUser();
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    axios.get(`/api/user/cart`, {
-      headers : {
-        authorization: getToken
-      }
-    })
-    .then((res)=>{
-      console.log("added", res.data.cart);
-    })
-    .catch((err)=>{
-      console.log("addError", err);
-    })
+  //   axios.get(`/api/user/cart`, {
+  //     headers : {
+  //       authorization: getToken
+  //     }
+  //   })
+  //   .then((res)=>{
+  //     console.log("added", res.data.cart);
+  //   })
+  //   .catch((err)=>{
+  //     console.log("addError", err);
+  //   })
 
-  },[])
+  // },[])
   
     return (
         <>
