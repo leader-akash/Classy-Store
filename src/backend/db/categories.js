@@ -39,11 +39,11 @@ export const categories = [
   {
     _id: uuid(),
     image: gaming,
-    categoryName: "Gaming",
+    categoryName: "Games",
   },
   {
     _id: uuid(),
     image: camera,
-    categoryName: "Cameras",
+    categoryName: "Camera",
   },
 ];

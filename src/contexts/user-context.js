@@ -8,7 +8,6 @@ const UserProvider = ({children}) => {
 
   useEffect(()=>{
     setGetToken(localStorage.getItem("token"));
-
   }, [])
 
   const [isLoggedIn, setIsLoggedIn] = useState(getToken ? true : false);

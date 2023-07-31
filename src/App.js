@@ -26,7 +26,7 @@ function App() {
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
       <ToastContainer 
-        position="top-right"
+        position="top-center"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}

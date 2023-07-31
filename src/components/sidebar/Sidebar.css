@@ -13,8 +13,9 @@
 
 .sidebar-section{
     /* position: fixed;
-    overflow-y: scroll;
-    height: 100vh; */
+    overflow-y: auto;
+    height: 100%;
+    z-index: 100; */
     /* height: calc(100vh - 8.125rem); */
 }
 
