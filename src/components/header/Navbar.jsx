@@ -3,9 +3,10 @@ import "./Navbar.css";
 import { Link, useLoaderData, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useUser } from "contexts/user-context";
 import { useFilter } from "contexts/filter-context";
+
 const Navbar = () => {
    const { getToken, setGetToken } = useUser();
-
+   console.log("toke", getToken)
    const {searchItem, setSearchItem} = useFilter();
 
    const navigate = useNavigate();
@@ -34,6 +35,8 @@ const Navbar = () => {
    const handleSearch = (e) => {
          setSearchItem(e.target.value);
    }
+  
+
 
   const handleSearchNavigation = () => {
    if(location.pathname !== "/products"){
@@ -50,7 +53,7 @@ const Navbar = () => {
             <i className="fa-solid fa-magnifying-glass "></i>
          </div>
          <div className="button-right">
-         <div className="icon-setting1">
+         <div className="icon-setting1" >
             <Link className="wishlist-badge" to="/wishlist">
                <span className="badge-icon">
                   <span className="badge red">0</span>
@@ -58,7 +61,7 @@ const Navbar = () => {
                </span>
             </Link>
          </div>
-         <div className="icon-setting2">
+         <div className="icon-setting2" >
             <Link className="addtocart-badge" to="/cart">
                <span className="badge-icon">
                   <span className="badge blue">0</span>

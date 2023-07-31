@@ -8,14 +8,13 @@ const UserProvider = ({children}) => {
 
   useEffect(()=>{
     setGetToken(localStorage.getItem("token"));
-
   }, [])
 
   const [isLoggedIn, setIsLoggedIn] = useState(getToken ? true : false);
 
 
   return (
-    <UserContext.Provider value={{getToken, setGetToken, isLoggedIn, setIsLoggedIn}}>
+    <UserContext.Provider value={{getToken, isLoggedIn, setIsLoggedIn, setGetToken }}>
       {children}
     </UserContext.Provider>
   )

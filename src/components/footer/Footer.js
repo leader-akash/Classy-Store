@@ -18,7 +18,7 @@ const Footer = () => {
                 <p className='foot-des'>FAQ</p>
                 <p className='foot-des'>Privacy Policy</p>
             </div>
-            <div lassName="contact">
+            <div className="contact">
                 <p className="foot-heading">Contact us</p>
                 <p className='foot-des'><Link className='contact-link' to="https://www.linkedin.com/in/hi-akash/" target='_blank'>Linkedin</Link></p>
                 <p className='foot-des'><Link className='contact-link' to="https://github.com/leader-akash" target='_blank'>Github</Link></p>

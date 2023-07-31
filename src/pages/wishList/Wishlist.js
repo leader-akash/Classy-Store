@@ -5,6 +5,9 @@ import wishlist from "../../assets/images/wishlist.png"
 import WishlistItems from './sub-component/WishlistItems';
 
 const Wishlist = () => {
+
+
+
   return (
     <>
     <div className="wishlist-container">
