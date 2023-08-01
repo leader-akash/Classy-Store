@@ -17,10 +17,12 @@
     height: 100%;
     z-index: 100; */
     /* height: calc(100vh - 8.125rem); */
+    margin-top: 5rem;
+
 }
 
 .sidebar-section::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
   }
 
 .sidebar-container{
@@ -37,8 +39,8 @@
     height: calc(100vh - 8.125rem);
     top:4rem;
     bottom: 0; */
-    /* position: sticky; */
-    /* overflow-y: scroll;
+    /* position: sticky;
+    overflow-y: scroll;
     height: calc(100vh - 8.125rem); */
 }
 

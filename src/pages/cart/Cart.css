@@ -57,8 +57,10 @@
 .cart-center{
     justify-content: space-between;
     margin: 0 7rem;
+    margin-top: 8rem;
 }
 
 .horiz-card-alignment{
     /* margin-left: 2rem; */
+    
 }

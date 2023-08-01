@@ -52,10 +52,22 @@ const WishlistProvider = ({children}) => {
         })
       },[addToWishlist])
 
+      const handleRemoveWishlist = (id) => {
+        axios.delete(`/api/user/cart/${id}`,
+        {headers: {
+            authorization: getToken
+      }})
+      .then((res)=>{
+        console.log("remwish", res)
+      })
+      .catch((err)=>{
+        console.log("remerr", err)
+      })
+      }
 
 
   return (
-    <WishlistContext.Provider value={{addToWishlist, setAddToWishlist, wishlistData}}>
+    <WishlistContext.Provider value={{addToWishlist, setAddToWishlist, wishlistData, handleRemoveWishlist}}>
         {children}
     </WishlistContext.Provider>
   )

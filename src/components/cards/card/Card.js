@@ -8,7 +8,7 @@ import { useCart } from 'contexts/cart-context';
 import { useWishlist } from 'contexts/wishlist-context';
 
 const details = {
-  
+
 }
 
 const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
@@ -16,19 +16,25 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
   const navigate = useNavigate();
   const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
   const [isProductAddedToWishlist, setIsProductAddedToWishList] = useState(false);
-  const { addToCart, setAddToCart,cartData } = useCart();
-  const {addToWishlist, setAddToWishlist, wishlistData} = useWishlist();
+  const { addToCart, setAddToCart, cartData } = useCart();
+  const { addToWishlist, setAddToWishlist, wishlistData } = useWishlist();
 
   const { getToken } = useUser();
 
 
   const handleAddtoCart = () => {
-    setAddToCart({image, description, price, marketPrice, label, labelStyle, rating, _id})
-    console.log( "handleCart")
+    setAddToCart({ image, description, price, marketPrice, label, labelStyle, rating, _id })
+    console.log("handleCart")
   }
-  
+
   const handleAddtoWishlist = () => {
-    setAddToWishlist({image, description, price, marketPrice, label, labelStyle, rating, _id})
+    setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
+  }
+
+  const handleRemoveWishlist = (_id) => {
+    if (wishlistData?.length > 0 && getToken) {
+      setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
+    }
   }
 
 
@@ -44,13 +50,13 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
         <div className="card-price1">
           <div style={{ color: 'red', fontWeight: ' bold', fontSize: '16px', paddingRight: '5px' }}>{price}</div>
           <div style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
-          <div className="rating-section">{rating}<i class="fa-sol_ fa-star"></i></div>
+          <div className="rating-section">{rating}<i class="fa-solid fa-star"></i></div>
         </div>
 
         <div className="card-button1 card-action">
           {
 
-            cartData.findIndex((element)=> element._id === _id) !== -1 && getToken ?
+            cartData.findIndex((element) => element._id === _id) !== -1 && getToken ?
               <Link to="/cart" >
                 <button className="add goto-cart" >
 
@@ -58,16 +64,16 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                 </button>
               </Link>
               :
-              <button className="add" onClick={handleAddtoCart}>
+              <button className="add" onClick={() => { getToken ? handleAddtoCart() : navigate("/login") }}>
                 Add to Cart
               </button>
           }
           <div className="like like-heart ">
             {
-              wishlistData.findIndex((element)=> element._id === _id) !== -1 && getToken ?
+              wishlistData.findIndex((element) => element._id === _id) !== -1 && getToken ?
                 <i className="fa fa-heart fa-2x red-heart"></i>
                 :
-                <i className="far fa-heart fa-2x"  onClick={handleAddtoWishlist}></i>
+                <i className="far fa-heart fa-2x" onClick={() => { getToken ? handleAddtoWishlist() : navigate("/login") }}></i>
             }
           </div>
 

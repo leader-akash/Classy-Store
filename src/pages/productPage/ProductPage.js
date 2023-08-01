@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./ProductPage.css";
 import Sidebar from '../../components/sidebar/Sidebar';
 import Card from '../../components/cards/card/Card';
@@ -11,6 +11,10 @@ const ProductPage = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedRating, setSelectedRating] = useState('');
  
+  useEffect(()=>{
+    window.scrollTo({top:0, left: 0, behavior: "smooth"})
+  },[])
+
   const filterProducts = (selectedCategories) => {
     let filteredProducts = cardData;
  
