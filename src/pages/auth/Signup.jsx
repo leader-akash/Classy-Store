@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "./Auth.css";
 import axios from 'axios';
@@ -16,6 +16,10 @@ const Signup = () => {
     const [confirmPasswordVal, setConfirmPasswordVal] = useState();
     const [isPasswordMatch, setIsPasswordMatch] = useState(false);
     const {setGetToken} = useUser();
+
+    useEffect(()=>{
+        window.scrollTo({top:0, left: 0, behavior: "smooth"})
+      },[])
 
     const handleName = (e) => {
         setNameVal(e.target.value);

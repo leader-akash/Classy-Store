@@ -11,8 +11,14 @@ import Signup from './pages/auth/Signup';
 import Login from './pages/auth/Login';
 import Wishlist from './pages/wishList/Wishlist';
 import Cart from "./pages/cart/Cart";
+import { useEffect } from "react";
 
 function App() {
+
+  useEffect(()=>{
+    window.scrollTo({top:0, left: 0, behavior: "smooth"})
+  },[])
+
   return (
     <>
       <Navbar />

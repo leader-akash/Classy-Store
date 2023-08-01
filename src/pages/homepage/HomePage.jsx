@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "./HomePage.css"
 import tech from "assets/images/tech.png";
 import Badge from 'components/cards/badge/Badge';
@@ -13,7 +13,9 @@ import PopularPurchases from './sub-components/PopularPurchases';
 
 const HomePage = () => {
 
-  // const []
+  useEffect(()=>{
+    window.scrollTo({top:0, left: 0, behavior: "smooth"})
+  },[])
 
   return (
     <>

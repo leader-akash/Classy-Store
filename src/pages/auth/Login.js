@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 import axios from 'axios';
@@ -9,6 +9,10 @@ import { useUser } from 'contexts/user-context';
 const Login = () => {
 
    const navigate = useNavigate();
+
+   useEffect(()=>{
+      window.scrollTo({top:0, left: 0, behavior: "smooth"})
+    },[])
 
    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 

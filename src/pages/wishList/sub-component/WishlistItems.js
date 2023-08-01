@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Card from 'components/cards/card/Card';
 import { useUser } from 'contexts/user-context';
+import { useWishlist } from 'contexts/wishlist-context';
 import React, { useState, useEffect } from 'react'
 
 const WishlistItems = () => {
@@ -8,27 +9,29 @@ const WishlistItems = () => {
    const [wishlistItem, setWishlistItem] = useState([]);
    const { getToken } = useUser();
 
+   const {wishlistData} = useWishlist();
+
    
-   useEffect(() => {
+   // useEffect(() => {
 
-      axios.get(`/api/user/wishlist`, {
-         headers: {
-            authorization: getToken
-         }
-      }).then((res) => {
+   //    axios.get(`/api/user/wishlist`, {
+   //       headers: {
+   //          authorization: getToken
+   //       }
+   //    }).then((res) => {
 
-         setWishlistItem(res.data.wishlist);
-      })
-         .catch((err) => {
-            console.log("wish-err", err);
-         })
+   //       setWishlistItem(res.data.wishlist);
+   //    })
+   //       .catch((err) => {
+   //          console.log("wish-err", err);
+   //       })
 
-   }, [getToken])
+   // }, [getToken])
 
    return (
       <div className='flex wishlist-wrap'>
          {
-            wishlistItem.map((el, i) => {
+            wishlistData.map((el, i) => {
                return (
                   <Card
                      key={i}
