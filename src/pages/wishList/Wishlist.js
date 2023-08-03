@@ -16,24 +16,24 @@ const Wishlist = () => {
   return (
     <>
       {
-      wishlistData.length > 0 ?
-        <div className='wishlist-data'>
-          <WishlistItems />
-        </div>
-      :
-      <>
-        <div className="wishlist-container">
-          <div className="wishlist">Your wishlist is empty</div>
-          <img className='wishlist-img' src={wishlist} alt="wishlist" />
-          <br />
-          <Link className='goto-productpage shop-now' to="/products"><button className='wishlist-btn'>Shop now</button></Link>
-        </div>
-        <div >
-          {/* <WishlistItems /> */} 
+        wishlistData.length > 0 ?
+          <div className='wishlist-data'>
+            <WishlistItems />
+          </div>
+          :
+          <>
+            <div className="wishlist-container">
+              <div className="wishlist">Your wishlist is empty</div>
+              <img className='wishlist-img' src={wishlist} alt="wishlist" />
+              <br />
+              <Link className='goto-productpage shop-now' to="/products"><button className='wishlist-btn'>Shop now</button></Link>
+            </div>
+            <div >
+              {/* <WishlistItems /> */}
 
-        </div>
-      </>
-    }
+            </div>
+          </>
+      }
 
     </>
   )

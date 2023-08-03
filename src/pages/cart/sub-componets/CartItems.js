@@ -8,9 +8,9 @@ const CartItems = () => {
 
     const [cartItem, setCartItem] = useState([]);
     const { getToken } = useUser();
-     const {addToCart, cartData}= useCart();
+    const { addToCart, cartData } = useCart();
 
-     console.log("cartData",cartData)
+    console.log("cartData", cartData)
     // useEffect(() => {
     //     axios.get(`/api/user/cart`, {
     //         headers: {
@@ -25,7 +25,7 @@ const CartItems = () => {
     //         })
     // }, [getToken])
 
-    
+
 
 
     return (
@@ -34,8 +34,8 @@ const CartItems = () => {
                 cartData.map((el, i) => {
                     return (
                         <HorizontalCard
-                        key={i}
-                        _id ={el._id}
+                            key={i}
+                            _id={el._id}
                             image={el.image}
                             description={el.description}
                             price={el.price}

@@ -50,7 +50,6 @@
     margin-top: 1.3rem;
     text-align: center;
     background-color: var(--button);
-    border: none;
     /* color: white !important; */
     font-size: 18px;
     border-radius: 5px;
@@ -104,3 +103,111 @@
     text-decoration: underline;
 }
 
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+ 
+    
+.banner{
+    /* margin-top: 6rem; */
+    width: 343px;
+    margin: 6rem  1rem 0.5rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-container{
+    margin: 1.2rem 0.5rem 1rem 1.5rem;
+}
+
+.banner-container .techInfo{
+    font-size: 1.2rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-weight: bold;
+}
+
+.banner-container .discount {
+    margin: 1rem 2rem 0 0;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img{
+    margin-right: 1rem;
+    width: 150px;
+    height: 180px;
+}
+
+.banner-container .shopNow{
+    margin-top: 1rem;
+    text-align: center;
+    background-color: var(--button);
+    /* color: white !important; */
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border:  2px solid transparent;
+    color: white;
+} 
+
+.featCardCenter{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.features{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin: 2rem 0;
+    text-decoration: underline;
+}
+
+.badgeCardCenter{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardCenter{
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    margin-left: 0.6rem;
+}
+
+.popular{
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    text-decoration: underline;
+}
+
+  
+  }
+  
+  @media only screen and (min-width: 410px) and (max-width: 619px) {
+    
+  
+
+  }
+  
+  /* Small devices (tablets) */
+  @media only screen and (min-width: 620px) and (max-width: 990px) {
+  
+  }
+  
+  /* Medium devices (desktops, laptops) */
+  @media only screen and (min-width: 991px) and (max-width: 1279px) {
+  }
+  

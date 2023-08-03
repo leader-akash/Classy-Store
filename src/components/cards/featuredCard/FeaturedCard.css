@@ -72,3 +72,68 @@
 }
 
 
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    .featured-card{
+        width: 150px;
+        height: 180px;
+        margin: 0.3rem;
+        margin-bottom: 2rem;
+    }
+       
+    .featured-card .items{
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px ;
+    }
+    
+    .featured-card img{
+        width: 120px;
+        height: 110px;
+        margin-top: 15px;
+    }
+    
+    .featured-card .view-deal{
+        
+        /* width: 150px; */
+        text-align: center;
+        margin: auto;
+        background-color: var(--button);
+        border: none;
+        color: white;
+        font-size: 11px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-bottom: 12px;
+        /* padding: 0; */
+    }
+    
+    .view-link{
+        padding: 0 !important;
+        color: white;
+    }
+    
+    .featured-card .view-deal:hover{
+        background-color: var(--button-fade);
+        /* border: 1px solid white; */
+    }
+    
+
+}
+
+@media only screen and (min-width: 410px) and (max-width: 619px) {
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 620px) and (max-width: 990px) {
+}
+
+/* Medium devices (desktops, laptops) */
+@media only screen and (min-width: 991px) and (max-width: 1279px) {
+}

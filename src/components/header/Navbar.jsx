@@ -7,6 +7,7 @@ import { cardData } from "data/card.data";
 import { useCart } from "contexts/cart-context";
 import { useWishlist } from "contexts/wishlist-context";
 
+
 const Navbar = () => {
    const { getToken, setGetToken } = useUser();
    console.log("toke", getToken)
@@ -62,7 +63,7 @@ const Navbar = () => {
             <input className="search-input" type="search" placeholder="Search classy-store.netlify.app" onChange={handleSearch} />
             <i className="fa-solid fa-magnifying-glass "></i>
          </div>
-         <div className="button-right">
+         <div className="button-right responsive-btn">
          <div className="icon-setting1" >
             <Link className="wishlist-badge" to="/wishlist">
                <span className="badge-icon">
@@ -98,6 +99,7 @@ const Navbar = () => {
          }
 
          </div>
+
 
       </div>
    );

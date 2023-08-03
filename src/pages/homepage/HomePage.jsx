@@ -26,12 +26,12 @@ const HomePage = () => {
             <br />
             Big discount
           </div>
-          <p className="discount">Save 50% on your first purchase</p>
+          <p className="discount">Save upto 60% on your all purchase</p>
 
           <Link className="shop-link" to="/products"><button className="shopNow">Shop now</button></Link>
         </div>
 
-        <img src={tech} alt="tech" />
+        <img className='tehc-img' src={tech} alt="tech" />
       </div>
 
       <div className="flex badgeCardCenter">
