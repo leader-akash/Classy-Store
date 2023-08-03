@@ -17,7 +17,7 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
   const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
   const [isProductAddedToWishlist, setIsProductAddedToWishList] = useState(false);
   const { addToCart, setAddToCart, cartData } = useCart();
-  const { addToWishlist, setAddToWishlist, wishlistData } = useWishlist();
+  const { addToWishlist, setAddToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
 
   const { getToken } = useUser();
 
@@ -27,20 +27,25 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
     console.log("handleCart")
   }
 
-  const handleAddtoWishlist = () => {
-    setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
-  }
-
-  const handleRemoveWishlist = (_id) => {
-    if (wishlistData?.length > 0 && getToken) {
+  const handleAddtoWishlist = (_id) => {
+    if(wishlistData?.findIndex((el)=> el._id === _id) !== -1){
+      handleRemoveWishlist(_id)
+    }
+    else{
       setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
     }
   }
 
+  // const handleRemoveWishlist = (_id) => {
+  //   if (wishlistData?.length > 0 && getToken) {
+  //     setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
+  //   }
+  // }
+
 
   return (
     <>
-      <div className="card-container1">
+      <div className="card-container1 card-center-section" >
         <div className="card-header">
           <div className={`badge ${labelStyle} card-badge`}>{label}</div>
 
@@ -48,8 +53,8 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
         <div><img className=" card-image" src={image} alt="card" /></div>
         <p className="card-info1 item-des">{description}</p>
         <div className="card-price1">
-          <div style={{ color: 'red', fontWeight: ' bold', fontSize: '16px', paddingRight: '5px' }}>{price}</div>
-          <div style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
+          <div className='our-price' style={{ color: 'red', fontWeight: ' bold', fontSize: '16px', paddingRight: '5px' }}>{price}</div>
+          <div className='market-price' style={{ fontSize: '14px' }}> <strike>{marketPrice}</strike></div>
           <div className="rating-section">{rating}<i class="fa-solid fa-star"></i></div>
         </div>
 
@@ -68,14 +73,17 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                 Add to Cart
               </button>
           }
-          <div className="like like-heart ">
+          <button className="like like-heart wishlist-heart" onClick={() => { getToken ? handleAddtoWishlist() : navigate("/login") }}>
+          {
+            console.log('console', wishlistData, "id", _id)
+          }
             {
               wishlistData.findIndex((element) => element._id === _id) !== -1 && getToken ?
-                <i className="fa fa-heart fa-2x red-heart"></i>
+                <i className="far fa-heart fa-2x" ></i>
                 :
-                <i className="far fa-heart fa-2x" onClick={() => { getToken ? handleAddtoWishlist() : navigate("/login") }}></i>
+                <i className="fa fa-heart fa-2x red-heart"></i>
             }
-          </div>
+          </button>
 
         </div>
       </div>

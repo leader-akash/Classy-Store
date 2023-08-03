@@ -36,7 +36,7 @@ const WishlistProvider = ({children}) => {
         //   else{
         //       navigate("/login")
         //   }
-      },[addToWishlist])
+      },[addToWishlist, ])
       
       useEffect(()=>{
         axios.get(`/api/user/wishlist`,{
@@ -53,12 +53,13 @@ const WishlistProvider = ({children}) => {
       },[addToWishlist])
 
       const handleRemoveWishlist = (id) => {
-        axios.delete(`/api/user/cart/${id}`,
+        axios.delete(`/api/user/wishlist/${id}`,
         {headers: {
             authorization: getToken
       }})
       .then((res)=>{
-        console.log("remwish", res)
+        toast.success("Removed from Wishlist")
+        console.log("delete", res)
       })
       .catch((err)=>{
         console.log("remerr", err)

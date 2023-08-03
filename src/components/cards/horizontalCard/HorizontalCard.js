@@ -4,12 +4,15 @@ import axios from 'axios'
 import { useUser } from 'contexts/user-context';
 import { toast } from 'react-toastify';
 import { useWishlist } from 'contexts/wishlist-context';
+import { useCart } from 'contexts/cart-context';
 
 
 const HorizontalCard = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
 
     const [isProductAdded, setIsProductAdded] = useState(false);
   const {addToWishlist, setAddToWishlist, wishlistData} = useWishlist();
+
+  const {dispatch, handleRemoveCart} = useCart()
 
 
     const { getToken } = useUser();
@@ -29,13 +32,34 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
         
     }
 
-    
+    // const handleRemoveItem = (id) = {
+    //     dispatch({type : "REMOVE_CART",  payload: id })
+    //   }
 
+    const [cartInfo, setCartInfo] = useState([])
+    
+    // const handleRemoveCart = (_id) => {
+    //     // alert(_id)
+    //     // console.log("id", id)
+    //     console.log("removed item")
+    //     axios.delete(`/api/user/cart/_id`,{
+    //         headers: {
+    //             authorization: getToken
+    //         }
+    //     })
+    //     .then((res)=>{
+    //         console.log(res, "deltedCart")
+    //     })
+    // }
+
+
+ 
     return (
         <div className="card-container-horiz">
             <div className="card-header">
                 <div className="badge green card-badge-horiz label-horiz label-padding">{label}</div>
-                <div className="card-cancel-horiz">X</div>
+                {/* <div className="card-cancel-horiz" onClick={(e) => dispatch({type: "REMOVE_CART", payload: _id})}>X</div> */}
+                <div className="card-cancel-horiz  " onClick={handleRemoveCart(_id)}>X</div>
             </div>
             <div className="card-padding">
                 <div>

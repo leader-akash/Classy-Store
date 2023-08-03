@@ -85,3 +85,116 @@
 .red-heart{
     color: red;
 }
+
+.wishlist-heart{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    width: 50px;
+}
+
+.wishlist-heart:hover{
+    font-size: 15px;
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    .card-center-section{
+        text-align: center;
+    }
+
+    .card-container1{
+        border: solid 1px transparent;
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+        margin-left: 0rem;
+        height: 180px;
+        width: 120px !important;
+    }
+    
+    
+    .like-heart:hover{
+        font-size: 6px !important;
+    }
+
+    .like-heart{
+        font-size: 6px !important;
+    }
+    
+    .card-image{
+        width: 100px !important;
+        height: 80px;
+        margin-left: 20px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-info1{
+        height: 20px !important;
+        font-size: 8px;
+    }
+    
+    .rating-section{
+        background-color: var(--background-color);
+        display: inline-block;
+        color: black !important;
+        margin-left: 0px;
+        padding: 1px 3px;
+        /* width: 20px; */
+    }
+    
+    .card-price1{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin: 1rem 0 0.1rem 1.5rem !important;
+        font-size: 9px;
+    }
+
+    .our-price{
+        font-size: 9px !important;
+    }
+
+    .market-price{
+        font-size: 8px !important;
+        margin: 0 !important;
+    }
+
+    .rating-section{
+        font-size: 8px;
+    }
+    
+    .fa-star{
+        color:coral;
+        font-size: 6px;
+    }
+
+    .add{
+        font-size: 8px;
+        width: 80px;
+        /* height: 10px; */
+        font-weight: 500;
+        padding: 3px 5px !important;
+    }
+    
+
+
+}
+
+@media only screen and (min-width: 410px) and (max-width: 619px) {
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 620px) and (max-width: 990px) {
+}
+
+/* Medium devices (desktops, laptops) */
+@media only screen and (min-width: 991px) and (max-width: 1279px) {
+}
