@@ -177,13 +177,23 @@
     }
 
     .add{
-        font-size: 8px;
+        font-size: 7px;
         width: 80px;
         /* height: 10px; */
         font-weight: 500;
-        padding: 3px 5px !important;
+        padding: 3px 4px !important;
+    }
+
+    .goto-cart{
+        padding: 3px !important;
+        margin-left: 12px;
+        margin-right: 0 !important;
     }
     
+    .card-action{
+        display: flex !important;
+        justify-content: space-around !important;
+    }
 
 
 }
