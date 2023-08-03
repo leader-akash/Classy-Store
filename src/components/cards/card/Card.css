@@ -178,7 +178,7 @@
 
     .add{
         font-size: 7px;
-        width: 80px;
+        width: 60px;
         /* height: 10px; */
         font-weight: 500;
         padding: 3px 4px !important;
@@ -186,13 +186,18 @@
 
     .goto-cart{
         padding: 3px !important;
-        margin-left: 12px;
+        width: 50px;
+        font-weight: 500 !important;
         margin-right: 0 !important;
     }
     
-    .card-action{
+    /* .card-action{
         display: flex !important;
-        justify-content: space-around !important;
+        justify-content: space-between !important;
+    } */
+
+    .btn-style{
+        padding: 0 !important;
     }
 
 

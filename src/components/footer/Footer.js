@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">
             <div className="account">
                 <p className="foot-heading">Account</p>
-                <p className='foot-des'><Link className='contact-link' to="/myaccount">My Account </Link></p>
+                <p className='foot-des'><Link className='contact-link' to="/">My Account </Link></p>
                 <p className='foot-des'> <Link className='contact-link' to="/wishlist">Wishlist </Link></p>
                 <p className='foot-des'> <Link className='contact-link' to="/cart">My Cart </Link></p>
             </div>
