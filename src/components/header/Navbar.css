@@ -128,7 +128,7 @@ span i {
     width: 93px;
     display: flex;
     justify-content: space-between;
-    margin-right: 10px;
+    margin-right: 8px;
   }
 
   .search-bar i {
@@ -140,10 +140,12 @@ span i {
     width: 70px;
   }
   .sign-in {
+    margin-top: 8px;
     font-size: 9px;
     margin-bottom: 0;
     width: 50px !important;
     height: 2rem;
+    text-align: center !important;
     margin-right: 2rem;
   }
 

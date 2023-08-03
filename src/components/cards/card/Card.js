@@ -62,7 +62,7 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
           {
 
             cartData.findIndex((element) => element._id === _id) !== -1 && getToken ?
-              <Link to="/cart" >
+              <Link className='btn-style' to="/cart" >
                 <button className="add goto-cart" >
 
                   Go to Cart
