@@ -80,7 +80,7 @@
 
     .featured-card{
         width: 150px;
-        height: 180px;
+        height: 195px;
         margin: 0.3rem;
         margin-bottom: 2rem;
     }
@@ -94,7 +94,7 @@
     
     .featured-card img{
         width: 120px;
-        height: 110px;
+        height: 100px;
         margin-top: 15px;
     }
     
@@ -110,7 +110,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-weight: 600;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
         /* padding: 0; */
     }
     
