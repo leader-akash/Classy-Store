@@ -27,7 +27,7 @@ const CartItems = () => {
 
 
 
-
+console.log('cartData', cartData)
     return (
         <div>
             {

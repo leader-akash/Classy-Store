@@ -7,7 +7,7 @@ import { featuredCardData } from '../../data/featuredCard.data';
 import { badgeData } from '../../data/badge.data';
 import { Link } from 'react-router-dom';
 import Card from '../../components/cards/card/Card';
-import { cardData } from '../../data/card.data';
+
 import FeaturedCategories from './sub-components/FeaturedCategories';
 import PopularPurchases from './sub-components/PopularPurchases';
 

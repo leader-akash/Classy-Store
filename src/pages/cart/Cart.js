@@ -35,7 +35,6 @@ const Cart = () => {
           </div>
 
           <PriceList />
-
         </div>
       }
 

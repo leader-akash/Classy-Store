@@ -47,6 +47,28 @@
 }
 
 @media only screen and (min-width: 410px) and (max-width: 619px) {
+
+
+  .small-badge {
+    width: 8rem;
+    height: 4rem;
+    background-color: var(--badge-color);
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 1rem;
+    color: black;
+    border-radius: 10px;
+  }
+  
+  .small-badge i {
+    font-size: 1.7rem;
+    margin-right: 14px;
+  }
+
 }
 
 /* Small devices (tablets) */

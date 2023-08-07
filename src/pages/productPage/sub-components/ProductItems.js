@@ -22,7 +22,7 @@ const ProductsItems = () => {
           return (
             <Card
               key={i}
-              _id={el._id}
+              _id={el?._id}
               image={el.image}
               description={el.description}
               price={el.price}

@@ -36,7 +36,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 3.5,
     image: buds2,
     description: "Noise Newly Launched Buds VS401 in-Ear Truly Wireless Earbuds ...",
@@ -92,7 +92,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 5,
     image: airpod,
     description: "Boat Airpod, Color: red, Noice cancellation",
@@ -115,7 +115,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 3.5,
     image: "https://m.media-amazon.com/images/I/512xXCsIAEL._AC_UY218_.jpg",
     description: "Noise Buds VS104 Truly Wireless Earbuds with 45Hs ...",
@@ -139,7 +139,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 3.5,
     image: "https://m.media-amazon.com/images/I/51wkzMNSA0L._AC_UY218_.jpg",
     description: "pTron Bassbuds Duo in Ear Earbuds with 32Hrs Total Playtime ...",
@@ -207,7 +207,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 3,
     image: "https://m.media-amazon.com/images/I/61O0rXhhP6L._AC_UY218_.jpg",
     description: "Redgear Cloak Wired RGB Wired Over Ear Gaming Headphones",
@@ -229,7 +229,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 4.5,
     image: headphone,
     description: "Red ultra clear  voice headphone 32Hrs Total Playtime ...",
@@ -240,7 +240,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 3.7,
     image: airpod,
     description: "Boat Airpod, Color: red, Noice cancellation",
@@ -284,7 +284,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    category: 'headphone',
+    category: 'headphones',
     rating: 5,
     image: airpod,
     description: "Boat Airpod, Color: red, Noice cancellation",
