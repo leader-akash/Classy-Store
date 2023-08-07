@@ -204,6 +204,103 @@
 }
 
 @media only screen and (min-width: 410px) and (max-width: 619px) {
+
+    .card-center-section{
+        text-align: center;
+    }
+
+    .card-container1{
+        border: solid 1px transparent;
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+        margin-left: 0rem;
+        height: 250px;
+        width: 190px !important;
+    }
+    
+    
+    .like-heart:hover{
+        font-size: 10px !important;
+    }
+
+    .like-heart{
+        font-size: 10px !important;
+    }
+    
+    .card-image{
+        width: 160px !important;
+        height: 110px;
+        margin-left: 20px;
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .card-info1{
+        height: 30px !important;
+        font-size: 12px;
+    }
+    
+    .rating-section{
+        background-color: var(--background-color);
+        display: inline-block;
+        color: black !important;
+        margin-left: 0px;
+        padding: 1px 3px;
+        /* width: 20px; */
+    }
+    
+    .card-price1{
+        display: flex !important;
+        justify-content: space-between !important;
+        margin: 1.5rem 0 0.1rem 1.5rem !important;
+        font-size: 13px;
+    }
+
+    .our-price{
+        font-size: 14px !important;
+    }
+
+    .market-price{
+        font-size: 13px !important;
+        margin: 0 !important;
+    }
+
+    .rating-section{
+        font-size: 10px;
+    }
+    
+    .fa-star{
+        color:coral;
+        font-size: 8px;
+    }
+
+    .add{
+        font-size: 11px;
+        width: 80px;
+        /* height: 10px; */
+        font-weight: 500;
+        padding: 3px 4px !important;
+    }
+
+    .goto-cart{
+        padding: 3px !important;
+        width: 80px;
+        font-weight: 500 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* .card-action{
+        display: flex !important;
+        justify-content: space-between !important;
+    } */
+
+    .btn-style{
+        padding: 0 !important;
+    }
+
+
 }
 
 /* Small devices (tablets) */

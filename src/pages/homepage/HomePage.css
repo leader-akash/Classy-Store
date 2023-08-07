@@ -198,6 +198,89 @@
   
   @media only screen and (min-width: 410px) and (max-width: 619px) {
     
+    
+.banner{
+    width: 550px;
+    margin: 6rem  1rem 0.5rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-container{
+    margin: 1.2rem 0.5rem 1rem 2.2rem;
+}
+
+.banner-container .techInfo{
+    font-size: 1.8rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-weight: bold;
+}
+
+.banner-container .discount {
+    margin: 1rem 2rem 0 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img{
+    margin-right: 1.5rem;
+    width: 260px;
+    height: 240px;
+}
+
+.banner-container .shopNow{
+    margin-top: 1.2rem;
+    text-align: center;
+    background-color: var(--button);
+    /* color: white !important; */
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border:  2px solid transparent;
+    color: white;
+} 
+
+.featCardCenter{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.features{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin: 2rem 0;
+    text-decoration: underline;
+}
+
+.badgeCardCenter{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardCenter{
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+.popular{
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    text-decoration: underline;
+}
+
   
 
   }

@@ -20,6 +20,10 @@
   --feature-card-pink: #FDEFEA;
 }
 
+h2{
+  color: inherit;
+}
+
 .mockman{
   margin-top: 5rem;
 }

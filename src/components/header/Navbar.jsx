@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { Link, useLoaderData, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useUser } from "contexts/user-context";
 import { useFilter } from "contexts/filter-context";
-import { cardData } from "data/card.data";
 import { useCart } from "contexts/cart-context";
 import { useWishlist } from "contexts/wishlist-context";
 
@@ -67,7 +66,7 @@ const Navbar = () => {
          <div className="icon-setting1" >
             <Link className="wishlist-badge" to="/wishlist">
                <span className="badge-icon">
-                  <span className="badge red">{wishlistData?.length > 20 ? "20+" : wishlistData.length}</span>
+                  <span className="badge red">{ getToken ? (wishlistData?.length > 20 ? "20+" : wishlistData.length) : 0 }</span>
                   <i className="fa-regular fa-heart"> </i>
                </span>
             </Link>
@@ -75,7 +74,7 @@ const Navbar = () => {
          <div className="icon-setting2" >
             <Link className="addtocart-badge" to="/cart">
                <span className="badge-icon">
-                  <span className="badge blue" > {cartData?.length > 20 ? "20+" : cartData.length} </span>
+                  <span className="badge blue" > { getToken ? (cartData?.length > 20 ? "20+" : cartData.length) : 0} </span>
                   <i className="fa-solid fa-cart-shopping " ></i>
                </span>
             </Link>

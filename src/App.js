@@ -12,6 +12,8 @@ import Login from './pages/auth/Login';
 import Wishlist from './pages/wishList/Wishlist';
 import Cart from "./pages/cart/Cart";
 import { useEffect } from "react";
+import RestrictAuth from "components/restrictedRoutes/RestrictAuth";
+import RequireAuth from "components/restrictedRoutes/RequireAuth";
 
 function App() {
 
@@ -24,11 +26,19 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
+
+        <Route element={<RestrictAuth />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
+
         <Route path="/products" element={<ProductPage />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/cart" element={<Cart />} />
+
+        <Route element={<RequireAuth />} >
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/cart" element={<Cart />} />
+        </Route>
+
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
       <ToastContainer 

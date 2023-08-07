@@ -4,7 +4,7 @@ import { useFilter } from 'contexts/filter-context';
 import { HIGH_TO_LOW, LOW_TO_HIGH } from 'utils/constants/constants';
 
 
-const Sidebar = ({ filterProducts, filterRatings, categories }) => {
+const Sidebar = () => {
 
   const { state: { showCategory, sortByPrice, sortByPriceRange, sortByRating }, dispatch } = useFilter();
 
@@ -34,8 +34,8 @@ const Sidebar = ({ filterProducts, filterRatings, categories }) => {
             <ul className="category-list">
               <li className='cat-list-item'>
                 <label className="cat-label">
-                  <input className="label-padding" type="checkbox" value="laptop" onChange={(e) => dispatch(handleCategory(e))}
-                    checked={showCategory.includes("LAPTOP")}
+                  <input className="label-padding" type="checkbox" value="laptops" onChange={(e) => dispatch(handleCategory(e))}
+                    checked={showCategory.includes("LAPTOPS")}
                   />
                   Laptops</label>
               </li>
@@ -47,9 +47,9 @@ const Sidebar = ({ filterProducts, filterRatings, categories }) => {
               </li>
               <li className='cat-list-item'>
                 <label className="cat-label">
-                  <input className="label-padding" type="checkbox" value="headphone" onChange={(e) => dispatch(handleCategory(e))}
-                    checked={showCategory.includes("HEADPHONE")} />
-                  Headphone</label>
+                  <input className="label-padding" type="checkbox" value="headphones" onChange={(e) => dispatch(handleCategory(e))}
+                    checked={showCategory.includes("HEADPHONES")} />
+                  Headphones</label>
               </li>
               <li className='cat-list-item'>
                 <label className="cat-label">
@@ -77,7 +77,7 @@ const Sidebar = ({ filterProducts, filterRatings, categories }) => {
             {/* price Range */}
             <h4 className="filter-tag">Price Range</h4>
             <ul className="category-list">
-            <li><span>all</span> <span>{sortByPriceRange > 0 && ` < ${sortByPriceRange}`}</span></li>
+            <li><span>all</span> <span>{sortByPriceRange > 0 && ` < ₹${sortByPriceRange}`}</span></li>
               <li className='cat-list-item'>
                 <input className="label-padding" type="range" min="0" max="100000" step="5000" value={sortByPriceRange}
                   onChange={(e) => dispatch({ type: "RANGE", payload: e.target.value })}

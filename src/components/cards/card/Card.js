@@ -12,12 +12,12 @@ const details = {
 }
 
 const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
-
+console.log('iiii', _id)
   const navigate = useNavigate();
   const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
   const [isProductAddedToWishlist, setIsProductAddedToWishList] = useState(false);
   const { addToCart, setAddToCart, cartData } = useCart();
-  const { addToWishlist, setAddToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
+  const { addToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
 
   const { getToken } = useUser();
 
@@ -27,14 +27,23 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
     console.log("handleCart")
   }
 
+  
+  
   const handleAddtoWishlist = (_id) => {
-    if(wishlistData?.findIndex((el)=> el._id === _id) !== -1){
+    console.log('testtt', wishlistData?.findIndex((el) => el._id === _id), 'wishlist', wishlistData)
+    if (wishlistData?.findIndex((el) => el._id === _id) !== -1) {
+      console.log('if', _id, wishlistData)
       handleRemoveWishlist(_id)
     }
-    else{
-      setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
+    else {
+      console.log('else')
+      addToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
     }
   }
+
+  // [] -> [......]
+
+  // [...] -> [..] : [....]
 
   // const handleRemoveWishlist = (_id) => {
   //   if (wishlistData?.length > 0 && getToken) {
@@ -73,15 +82,13 @@ const Card = ({ image, description, price, marketPrice, label, labelStyle, ratin
                 Add to Cart
               </button>
           }
-          <button className="like like-heart wishlist-heart" onClick={() => { getToken ? handleAddtoWishlist() : navigate("/login") }}>
-          {
-            console.log('console', wishlistData, "id", _id)
-          }
+          {console.log('hnji', wishlistData, ' id...', _id)}
+          <button className="like like-heart wishlist-heart" onClick={() => { getToken ? handleAddtoWishlist(_id) : navigate("/login"  ) }}>
             {
-              wishlistData.findIndex((element) => element._id === _id) !== -1 && getToken ?
-                <i className="far fa-heart fa-2x" ></i>
-                :
+              wishlistData?.findIndex((element) => element._id === _id) !== -1 && getToken ?
                 <i className="fa fa-heart fa-2x red-heart"></i>
+                :
+                <i className="far fa-heart fa-2x" ></i>
             }
           </button>
 
