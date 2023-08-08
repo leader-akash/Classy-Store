@@ -31,13 +31,10 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
         rating: rating
     }
     const handleAddtoWishlist = (_id) => {
-        console.log('testtt', wishlistData?.findIndex((el) => el._id === _id), 'wishlist', wishlistData)
         if (wishlistData?.findIndex((el) => el._id === _id) !== -1) {
-            console.log('if', _id, wishlistData)
             handleRemoveWishlist(_id)
         }
         else {
-            console.log('else')
             addToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
         }
     }

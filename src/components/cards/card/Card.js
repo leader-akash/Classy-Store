@@ -12,7 +12,7 @@ const details = {
 }
 
 const Card = ({ image, description, price, marketPrice, label, labelStyle, rating, _id }) => {
-console.log('iiii', _id)
+
   const navigate = useNavigate();
   const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
   const [isProductAddedToWishlist, setIsProductAddedToWishList] = useState(false);
@@ -24,33 +24,19 @@ console.log('iiii', _id)
 
   const handleAddtoCart = () => {
     setAddToCart({ image, description, price, marketPrice, label, labelStyle, rating, _id })
-    console.log("handleCart")
+
   }
 
   
   
   const handleAddtoWishlist = (_id) => {
-    console.log('testtt', wishlistData?.findIndex((el) => el._id === _id), 'wishlist', wishlistData)
     if (wishlistData?.findIndex((el) => el._id === _id) !== -1) {
-      console.log('if', _id, wishlistData)
       handleRemoveWishlist(_id)
     }
     else {
-      console.log('else')
       addToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
     }
   }
-
-  // [] -> [......]
-
-  // [...] -> [..] : [....]
-
-  // const handleRemoveWishlist = (_id) => {
-  //   if (wishlistData?.length > 0 && getToken) {
-  //     setAddToWishlist({ image, description, price, marketPrice, label, labelStyle, rating, _id })
-  //   }
-  // }
-
 
   return (
     <>
@@ -82,7 +68,6 @@ console.log('iiii', _id)
                 Add to Cart
               </button>
           }
-          {console.log('hnji', wishlistData, ' id...', _id)}
           <button className="like like-heart wishlist-heart" onClick={() => { getToken ? handleAddtoWishlist(_id) : navigate("/login"  ) }}>
             {
               wishlistData?.findIndex((element) => element._id === _id) !== -1 && getToken ?

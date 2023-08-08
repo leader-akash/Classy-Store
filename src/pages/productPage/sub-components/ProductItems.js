@@ -12,10 +12,6 @@ const ProductsItems = () => {
 
   const {filteredData} = useFilter();
 
-  console.log("filteredCategoryData", filteredData);
-
-
-
   return (
     <>
         {filteredData?.map((el, i) => {
