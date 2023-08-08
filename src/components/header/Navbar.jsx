@@ -9,7 +9,6 @@ import { useWishlist } from "contexts/wishlist-context";
 
 const Navbar = () => {
    const { getToken, setGetToken } = useUser();
-   console.log("toke", getToken)
    const {searchItem, setSearchItem} = useFilter();
    const{ cartData} = useCart();
    const {wishlistData} = useWishlist();
@@ -63,6 +62,13 @@ const Navbar = () => {
             <i className="fa-solid fa-magnifying-glass "></i>
          </div>
          <div className="button-right responsive-btn">
+         <div className="icon-setting1" >
+            <Link className="wishlist-badge" to="/products">
+               <span className="badge-icon">
+                  <i class="fa-solid fa-shop"></i>
+               </span>
+            </Link>
+         </div>
          <div className="icon-setting1" >
             <Link className="wishlist-badge" to="/wishlist">
                <span className="badge-icon">

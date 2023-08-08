@@ -17,7 +17,6 @@ const WishlistProvider = ({ children }) => {
   // add to wishlist 
   const addToWishlist = (prod) => {
     if (getToken) {
-console.log('pppp', prod)
       axios.post(`/api/user/wishlist`, {
         product: prod
       }, {
@@ -27,20 +26,17 @@ console.log('pppp', prod)
       }
       ).then((res) => {
         toast.success("Added to Wishlist 🎉")
-        console.log(res, 'resssss')
         setWishlistData(res?.data?.wishlist)
       })
         .catch((error) => {
           console.log("card-error", error)
         })
     }
-    //   else{
-    //       navigate("/login")
-    //   }
+
   }
   // },[addToWishlist, ])
 
-// get all wishlist
+  // get all wishlist
   const getAllWishlistData = () => {
     axios.get(`/api/user/wishlist`, {
       headers: {
@@ -49,7 +45,6 @@ console.log('pppp', prod)
     })
       .then((res) => {
         setWishlistData(res?.data.wishlist)
-        console.log('dekh', res)
       })
       .catch((err) => {
         console.log("wisherr", err)
@@ -57,11 +52,10 @@ console.log('pppp', prod)
   }
 
   useEffect(() => {
-    console.log('logggg')
     getAllWishlistData()
   }, [])
 
-  
+
 
   const handleRemoveWishlist = (_id) => {
     axios.delete(`/api/user/wishlist/${_id}`,
@@ -72,7 +66,6 @@ console.log('pppp', prod)
       })
       .then((res) => {
         toast.success("Removed from Wishlist")
-        console.log("delete", res)
         setWishlistData(res?.data?.wishlist)
       })
       .catch((err) => {
@@ -90,7 +83,6 @@ console.log('pppp', prod)
       })
       .then((res) => {
         toast.success("Removed from Wishlist")
-        console.log("delete", res)
         setWishlistData(res?.data?.wishlist)
       })
       .catch((err) => {
@@ -100,7 +92,7 @@ console.log('pppp', prod)
 
 
   return (
-    <WishlistContext.Provider value={{ addToWishlist, wishlistData, handleRemoveWishlist , handleRemoveFromWishlist}}>
+    <WishlistContext.Provider value={{ addToWishlist, wishlistData, handleRemoveWishlist, handleRemoveFromWishlist }}>
       {children}
     </WishlistContext.Provider>
   )

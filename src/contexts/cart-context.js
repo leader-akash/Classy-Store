@@ -15,7 +15,6 @@ const CartProvider = ({ children }) => {
 
   const [addToCart, setAddToCart] = useState();
   const [cartData, setCartData] = useState([]);
-  console.log("cart", addToCart)
   const { getToken } = useUser();
 
   const token = localStorage.getItem("token")
@@ -43,8 +42,6 @@ const CartProvider = ({ children }) => {
         }
       }
       ).then((res) => {
-        console.log(res, "addtocart", addToCart)
-        // setCartData(res.data.cart)
         toast.success("Added to Cart 🎉")
       })
         .catch((error) => {
@@ -64,7 +61,6 @@ const CartProvider = ({ children }) => {
       }
     })
       .then((res) => {
-        console.log("addsad", res)
         setCartData(res?.data?.cart)
       })
       .catch((err) => {
@@ -78,23 +74,17 @@ const CartProvider = ({ children }) => {
 
 
   const handleRemoveCart = (_id) => {
-    // alert(_id)
-    // console.log("id", id)
-    console.log("removed item")
     axios.delete(`/api/user/cart/${_id}`, {
       headers: {
         authorization: getToken
       }
     })
       .then((res) => {
-        console.log(res, "deltedCart")
         setCartData(cartData);
         getAllCartData();
       })
 
   }
-
-  console.log('cartData', cartData)
 
   const cartReducer = (state, action) => {
     if (action.type === "REMOVE_ITEM") {

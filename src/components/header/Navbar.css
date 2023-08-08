@@ -61,6 +61,12 @@ a:hover {
   margin-top: 12px;
 }
 
+.shopping-badge{
+  font-size: 21px;
+  margin-right: 14px;
+  margin-top: 8px;
+}
+
 .sign-in {
   font-size: 18px;
   margin-bottom: 0;
