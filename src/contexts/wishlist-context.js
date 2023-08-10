@@ -7,73 +7,97 @@ import { useNavigate } from 'react-router';
 
 const WishlistContext = createContext(null)
 
-const WishlistProvider = ({children}) => {
+const WishlistProvider = ({ children }) => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const [addToWishlist, setAddToWishlist] = useState();
-    const {getToken} = useUser(); 
-    const [wishlistData, setWishlistData] = useState([]);
+  const { getToken } = useUser();
+  const [wishlistData, setWishlistData] = useState([]);
 
-    useEffect(()=>{
-        if(getToken){
-     
-          axios.post(`/api/user/wishlist`, {
-           product: addToWishlist
-          }, {
-              headers: {
-                  authorization: getToken
-              }
-          }
-          ).then((res) => {
-     
-              toast.success("Added to Wishlist 🎉")  
-          })
-              .catch((error) => {
-                  console.log("card-error", error)
-              })
-          }
-        //   else{
-        //       navigate("/login")
-        //   }
-      },[addToWishlist, ])
-      
-      useEffect(()=>{
-        axios.get(`/api/user/wishlist`,{
-            headers:{
-                authorization: getToken
-            }
-        })
-        .then((res)=>{
-            setWishlistData(res.data.wishlist)
-        })
-        .catch((err)=>{
-            console.log("wisherr", err)
-        })
-      },[addToWishlist])
-
-      const handleRemoveWishlist = (id) => {
-        axios.delete(`/api/user/wishlist/${id}`,
-        {headers: {
-            authorization: getToken
-      }})
-      .then((res)=>{
-        toast.success("Removed from Wishlist")
-        console.log("delete", res)
+  // add to wishlist 
+  const addToWishlist = (prod) => {
+    if (getToken) {
+      axios.post(`/api/user/wishlist`, {
+        product: prod
+      }, {
+        headers: {
+          authorization: getToken
+        }
+      }
+      ).then((res) => {
+        toast.success("Added to Wishlist 🎉")
+        setWishlistData(res?.data?.wishlist)
       })
-      .catch((err)=>{
+        .catch((error) => {
+          console.log("card-error", error)
+        })
+    }
+
+  }
+  // },[addToWishlist, ])
+
+  // get all wishlist
+  const getAllWishlistData = () => {
+    axios.get(`/api/user/wishlist`, {
+      headers: {
+        authorization: getToken
+      }
+    })
+      .then((res) => {
+        setWishlistData(res?.data.wishlist)
+      })
+      .catch((err) => {
+        console.log("wisherr", err)
+      })
+  }
+
+  useEffect(() => {
+    getAllWishlistData()
+  }, [])
+
+
+
+  const handleRemoveWishlist = (_id) => {
+    axios.delete(`/api/user/wishlist/${_id}`,
+      {
+        headers: {
+          authorization: getToken
+        }
+      })
+      .then((res) => {
+        toast.success("Removed from Wishlist")
+        setWishlistData(res?.data?.wishlist)
+      })
+      .catch((err) => {
         console.log("remerr", err)
       })
-      }
+  }
+
+
+  const handleRemoveFromWishlist = (_id) => {
+    axios.delete(`/api/user/wishlist/${_id}`,
+      {
+        headers: {
+          authorization: getToken
+        }
+      })
+      .then((res) => {
+        toast.success("Removed from Wishlist")
+        setWishlistData(res?.data?.wishlist)
+      })
+      .catch((err) => {
+        console.log("remerr", err)
+      })
+  }
 
 
   return (
-    <WishlistContext.Provider value={{addToWishlist, setAddToWishlist, wishlistData, handleRemoveWishlist}}>
-        {children}
+    <WishlistContext.Provider value={{ addToWishlist, wishlistData, handleRemoveWishlist, handleRemoveFromWishlist }}>
+      {children}
     </WishlistContext.Provider>
   )
 }
 
-const useWishlist = ()=> useContext(WishlistContext)
+const useWishlist = () => useContext(WishlistContext)
 
-export {WishlistProvider, useWishlist}
+export { WishlistProvider, useWishlist }

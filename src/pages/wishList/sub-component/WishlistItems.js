@@ -9,9 +9,9 @@ const WishlistItems = () => {
    const [wishlistItem, setWishlistItem] = useState([]);
    const { getToken } = useUser();
 
-   const {wishlistData} = useWishlist();
+   const { wishlistData } = useWishlist();
 
-   
+
    // useEffect(() => {
 
    //    axios.get(`/api/user/wishlist`, {
@@ -31,9 +31,10 @@ const WishlistItems = () => {
    return (
       <div className='flex wishlist-wrap'>
          {
-            wishlistData.map((el, i) => {
+            wishlistData?.map((el, i) => {
                return (
                   <Card
+                     _id={el._id}
                      key={i}
                      image={el.image}
                      description={el.description}

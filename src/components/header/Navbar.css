@@ -3,13 +3,14 @@
 }
 
 .navbar-wrapper {
-  height: 3rem;
+  height: 2.7rem;
   position: fixed;
   top: 0;
   z-index: 100;
   display: flex !important;
   justify-content: space-between;
   padding-bottom: 1rem;
+  padding-top: 0.6rem;
 }
 
 .button-right {
@@ -58,6 +59,12 @@ a:hover {
 }
 .icon-setting2 {
   margin-top: 12px;
+}
+
+.shopping-badge{
+  font-size: 21px;
+  margin-right: 14px;
+  margin-top: 8px;
 }
 
 .sign-in {
@@ -190,12 +197,13 @@ span i {
   }
 
   .logo {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .search-bar {
     margin-top: 5px;
-    width: 200px;
+    width: 240px;
+    margin-right: 1rem;
     display: flex;
     justify-content: space-between;
   }
@@ -205,11 +213,11 @@ span i {
   }
 
   .search-bar .search-input {
-    font-size: 9px;
-    width: 100px;
+    font-size: 13px;
+    width: 180px;
   }
   .sign-in {
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 0;
     width: 120px !important;
     /* height: 2rem; */
@@ -218,7 +226,7 @@ span i {
   }
 
   .icon-setting1 {
-    margin-left: 14px;
+    /* margin-left: 4px; */
   }
 
   span i {
@@ -227,11 +235,11 @@ span i {
   }
 
   .badge-icon > i {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .badge {
-    font-size: 7px;
+    font-size: 9px;
   }
 }
 
@@ -246,56 +254,52 @@ span i {
   }
 
   .logo {
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
   }
 
   .search-bar {
-    margin-top: 5px;
-    width: 250px;
+    margin-top: 6px;
+    width: 320px;
     display: flex;
     justify-content: space-between;
   }
 
   .search-bar i {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .search-bar .search-input {
-    font-size: 14px;
+    font-size: 16px;
     width: 220px;
   }
   .sign-in {
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 0;
     width: 110px !important;
     /* height: 1.5rem; */
   }
 
   .icon-setting1 {
-    margin-left: 12px;
+    /* margin-left: 12px; */
   }
 
   span i {
     cursor: pointer;
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .badge-icon > i {
-    font-size: 18px;
+    margin-top: 5px;
+    font-size: 20px;
   }
 
   .badge {
-    font-size: 9px;
+    margin-top: 2px;
+    font-size: 14px;
   }
 
-  /* .search-bar{
-        width: 300px;
-    }
 
-    .search-bar .search-input {
-    width: 250px;
-  } */
 }
 
 /* Medium devices (desktops, laptops) */

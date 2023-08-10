@@ -123,6 +123,58 @@
 }
 
 @media only screen and (min-width: 410px) and (max-width: 619px) {
+
+       
+.footer-container{
+    background-color: var(--background-color);
+    width: 100% !important;
+    height: 13rem;
+    position: relative;
+    bottom: 0;
+    clear: both;
+    /* margin-top: 2rem; */
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-container  .foot-heading {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    color:  #5A5858;
+}
+
+.foot-des{
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.foot-des:hover{
+    color: blue;
+}
+
+.copyright{
+    margin: 0.7rem;
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: var(--footer-color);
+}
+
+.owner{
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px !important;
+    color: var(--footer-color);
+}
+
+
+
 }
 
 /* Small devices (tablets) */

@@ -8,25 +8,7 @@ const CartItems = () => {
 
     const [cartItem, setCartItem] = useState([]);
     const { getToken } = useUser();
-    const { addToCart, cartData } = useCart();
-
-    console.log("cartData", cartData)
-    // useEffect(() => {
-    //     axios.get(`/api/user/cart`, {
-    //         headers: {
-    //             authorization: getToken,
-    //         }
-    //     })
-    //         .then((res) => {
-    //             setCartItem(res.data.cart)
-    //         })
-    //         .catch((err) => {
-    //             console.log("err-horiz", err);
-    //         })
-    // }, [getToken])
-
-
-
+    const { addToCart, cartData } = useCart()
 
     return (
         <div>

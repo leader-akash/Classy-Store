@@ -89,8 +89,6 @@ const FilterProvider = ({ children }) => {
 
    const filteredSearchData = filterSearch(allProducts, searchItem);
 
-   console.log("data", filteredSearchData)
-
    const filterCategories = (filteredSearchData) => {
       const selectedCategories = state?.showCategory
       if (selectedCategories?.length === 0) {

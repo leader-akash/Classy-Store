@@ -15,11 +15,11 @@ const Signup = () => {
     const [passwordVal, setPasswordVal] = useState();
     const [confirmPasswordVal, setConfirmPasswordVal] = useState();
     const [isPasswordMatch, setIsPasswordMatch] = useState(false);
-    const {setGetToken} = useUser();
+    const { setGetToken } = useUser();
 
-    useEffect(()=>{
-        window.scrollTo({top:0, left: 0, behavior: "smooth"})
-      },[])
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+    }, [])
 
     const handleName = (e) => {
         setNameVal(e.target.value);
@@ -49,8 +49,8 @@ const Signup = () => {
                 password: passwordVal
             })
                 .then((res) => {
-                    localStorage.setItem("signup token", res.data?.encodedToken);
-                    localStorage.setItem("singup Info", JSON.stringify(res.data?.createdUser));
+                    localStorage.setItem("token", res.data?.encodedToken);
+                    localStorage.setItem("userInfo", JSON.stringify(res.data?.createdUser));
                     setGetToken(res.data?.encodedToken)
                     toast.success(`Hi ${nameVal}, Welcome to Classy Store 💖`);
                     navigate("/")
@@ -87,11 +87,11 @@ const Signup = () => {
                     <input className='input-box' type="password" id="confirmPassword" placeholder="Confirm Password" value={confirmPasswordVal} onChange={handleConfirmPassword} required />
                 </div>
                 <div id="errorContainer" >
-                {
-                    (isPasswordMatch ? "Password do not match" : null)
-                }
+                    {
+                        (isPasswordMatch ? "Password do not match" : null)
+                    }
                 </div>
-                
+
                 <div>
                     <button className="sign-button" type="submit">Signup</button>
                 </div>

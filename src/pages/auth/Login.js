@@ -53,7 +53,9 @@ const Login = () => {
       localStorage.setItem("userInfo", JSON.stringify(res?.data?.foundUser))
       setGetToken(res?.data?.encodedToken)
       toast.success(`welcome back, ${res.data?.foundUser?.name} 🎉 Enjoy Shopping 🛒`);
-      navigate("/");
+
+      navigate( -1 || "/", {replace: true});
+      
      })
      .catch((error) => {
       console.log("error", error)

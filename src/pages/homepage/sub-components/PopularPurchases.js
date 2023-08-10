@@ -20,7 +20,7 @@ const PopularPurchases = () => {
         {filteredData?.slice(0,8).map((el, i) => {
           return (
             <Card
-              _id={el._id}
+              _id={el?._id}
               image={el?.image}
               description={el?.description}
               price={el?.price}

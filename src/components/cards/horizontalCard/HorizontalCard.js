@@ -13,7 +13,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
     const [isProductAdded, setIsProductAdded] = useState(false);
     const { addToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
 
-    const { dispatch, handleRemoveCart, cartData } = useCart();
+    const { handleRemoveCart } = useCart();
 
     const [count, setCount] = useState(1);
 
