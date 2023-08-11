@@ -110,3 +110,96 @@
 .filter-tag{
     margin: 1rem 0;
 }
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+  
+.sidebar-section{
+    margin-top: 7.8rem;
+
+}
+
+
+.sidebar-container{
+    width: 170px;
+    background-color: var(--feature-card);
+    display: flex;
+    flex-direction: column;
+    margin-top: 7.8rem;
+ 
+}
+
+.categories{
+    background-color: var(--feature-card-pink);
+    padding: 20px;
+    width: 113px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.cat-heading{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.cat-list-item{
+    padding: 4px;
+    font-size: 15px;
+}
+
+.cat-label{
+    cursor: pointer;
+}
+
+.label-padding{
+    margin-right: 7px;
+}
+
+.category-list{
+    list-style: none;
+}
+
+
+.filter{
+    padding: 20px;
+    margin-top: 20px;
+    width: 115px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.sel-range{
+    width: 100px;
+}
+
+.filter-heading{
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.clear-filter{
+    font-size: 16px;
+    background-color: rgb(235, 28, 28);
+    border: none;
+    color:white;
+    height: 32px;
+    width: 112x;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-tag{
+    margin: 1rem 0;
+}
+
+
+}

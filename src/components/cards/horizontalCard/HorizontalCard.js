@@ -13,7 +13,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
     const [isProductAdded, setIsProductAdded] = useState(false);
     const { addToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
 
-    const { dispatch, handleRemoveCart } = useCart();
+    const { handleRemoveCart } = useCart();
 
     const [count, setCount] = useState(1);
 
@@ -89,7 +89,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
                             wishlistData.findIndex((element) => element._id === _id) !== -1 && getToken ?
                                 <button className="add remove-wishlist">Remove from Wishlist</button>
                                 :
-                                <button className="add " >Add to Wishlist</button>
+                                <button className="add add-wish" >Add to Wishlist</button>
                         }
                     </div>
                 </div>

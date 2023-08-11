@@ -66,3 +66,56 @@
     margin-top: 7rem;
     margin-bottom: 3rem;
 }
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    .wishlist-container{
+        margin-top: 9rem;
+        text-align: center;
+        margin-bottom: 5.5rem;
+    }
+    
+    .wishlist{
+        font-size: 2.3rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    
+    .wishlist-img{
+        margin-top: 1rem;
+        width: 16rem;
+        height: 12rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .wishlist-btn{
+        font-size: 1rem;
+    }  
+    
+.wishlist-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10rem;
+    margin-top: 8.5rem;
+}
+
+.wishlist-data{
+    margin-top: 7rem;
+    margin-left: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+
+}
+
+
+
+
+
+
+

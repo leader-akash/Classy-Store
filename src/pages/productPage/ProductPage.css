@@ -11,3 +11,25 @@
 .product-sidebar{
     width: 220px;
 }
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    .products-container{
+        margin-top: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 1.2rem;
+        margin-top: 8.3rem;
+        /* margin-left: 210px; */
+    }
+    
+    .product-sidebar{
+        width: 220px;
+    }
+    
+
+}
