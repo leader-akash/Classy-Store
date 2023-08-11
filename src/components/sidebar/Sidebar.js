@@ -79,7 +79,7 @@ const Sidebar = () => {
             <ul className="category-list">
             <li><span>all</span> <span>{sortByPriceRange > 0 && ` < ₹${sortByPriceRange}`}</span></li>
               <li className='cat-list-item'>
-                <input className="label-padding" type="range" min="0" max="100000" step="5000" value={sortByPriceRange}
+                <input className="label-padding sel-range" type="range" min="0" max="100000" step="5000" value={sortByPriceRange}
                   onChange={(e) => dispatch({ type: "RANGE", payload: e.target.value })}
                 />
               </li>

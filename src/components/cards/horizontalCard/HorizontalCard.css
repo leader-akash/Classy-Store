@@ -97,8 +97,8 @@
 
     
 .card-container-horiz{
-    height: 13rem;
-    width: 16rem;
+    height: 12rem;
+    width: 17rem;
     margin-bottom: 1rem;
     margin-left: 0rem;
 }
@@ -106,28 +106,38 @@
 .card-button-horiz {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 0rem;
+    font-size: 14px !important;
     margin-left: 1rem;
     align-items: center;
 }
 
+.card-button-horiz .add {
+    font-size: 14px;
+    width: 110px;
+}
 
 .card-price-horiz{
+    /* display: inline-block; */
     display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    font-size: 12px !important;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+    font-size: 13px !important;
    }
 
+.fa-star{
+    font-size: 11px;
+}
+
 .count-item{
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 600;
     margin: 0 1rem;
 }
 
 .count-btn{
     cursor: pointer;
-    font-size: 10px;
+    font-size: 16px;
     padding: 0 !important;
     width: 20px !important;
     text-align: center;
@@ -142,24 +152,11 @@
 }
 
 .horiz-img{
-    /* margin-top: 5px; */
-    width: 100px;
-    height: 75px;
+    margin-top: 22px;
+    width: 107px;
+    height: 85px;
     margin-left: 0.5rem !important;
     margin-bottom: 1rem;
-}
-
-.label-padding{
-    padding:4px 6px; 
-}
-
-.move-cart{
-    display: flex;
-    justify-content: center;
-} 
-
-.card-action{
-    display: flex;
 }
 
 .cancel-btn{
@@ -168,12 +165,8 @@
 }
 
 .card-info-horiz{
-    font-size: 10px !important;
+    font-size: 13px !important;
     margin-left: 0.5rem !important;
-}
-
-.card-price-horiz{
-    font-size: 10px  !important;
 }
 
    

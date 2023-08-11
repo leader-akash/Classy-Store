@@ -83,3 +83,21 @@
 .signup-form{
   margin-top: 8rem;
 }
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+  .login-container{
+    margin-top: 5rem;
+  }
+
+  .signup-form{
+    margin-top: 10rem;
+    width: 286px !important;
+  }
+
+}

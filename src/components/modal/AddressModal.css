@@ -57,3 +57,59 @@
     text-align: center;
 }
 
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    
+.address-bar{
+    margin-top: 1.5rem;
+    border: solid 1px black;
+    margin-bottom: 1rem;
+    padding: 1.4rem 1rem;
+    cursor: pointer;
+}
+
+.choose-address{
+    margin-top: 1.5rem;
+    border: solid 1px black;
+    margin-bottom: 1rem;
+    padding: 1.4rem 1rem;
+    cursor: pointer;
+    display: block;
+    /* cursor: pointer; */
+    /* padding: 1.7rem 1rem; */
+    font-size: 1.1rem;
+}
+
+.address-input{
+    margin-right: 0.5rem;
+    
+}
+
+.address-name{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.select-address{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.place-order{
+    background-color: rgb(18, 197, 18);
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.9rem;
+}
+
+}
+
