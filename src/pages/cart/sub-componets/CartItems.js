@@ -9,7 +9,7 @@ const CartItems = () => {
     const [cartItem, setCartItem] = useState([]);
     const { getToken } = useUser();
     const { addToCart, cartData } = useCart()
-
+// DRY - dont repeat yourself
     return (
         <div>
             {
