@@ -114,17 +114,22 @@
         box-shadow: var(--box-shadow);
         border-radius: 10px;
         margin-left: 0rem;
-        height: 180px;
+        height: 210px;
         width: 120px !important;
     }
     
     
     .like-heart:hover{
-        font-size: 6px !important;
+        font-size: 9px !important;
     }
 
-    .like-heart{
-        font-size: 6px !important;
+    .wishlist-heart {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 9px;
+        width: 0px;
+        margin-top: 2px;
     }
     
     .card-image{
@@ -139,7 +144,8 @@
     
     .card-info1{
         height: 20px !important;
-        font-size: 8px;
+        font-size: 10.5px;
+        margin-left: 0.5rem;
     }
     
     .rating-section{
@@ -154,48 +160,53 @@
     .card-price1{
         display: flex !important;
         justify-content: space-between !important;
-        margin: 1rem 0 0.1rem 1.5rem !important;
-        font-size: 9px;
+        margin: 2rem 0 0.5rem 1.5rem !important;
     }
 
     .our-price{
-        font-size: 9px !important;
+        font-size: 11.5px !important;
     }
 
     .market-price{
-        font-size: 8px !important;
+        font-size: 11.5px !important;
         margin: 0 !important;
     }
 
     .rating-section{
-        font-size: 8px;
+        font-size: 11.5px;
     }
     
     .fa-star{
         color:coral;
-        font-size: 6px;
+        font-size: 8px;
+    }
+
+    .card-price1{
+        height: 20px;
+        margin-left: 18px !important;
+        flex-wrap: wrap;
     }
 
     .add{
-        font-size: 7px;
-        width: 60px;
+        font-size: 11px;
+        width: 75px;
+        margin-top: 10px;
+        margin-left: -6px;
         /* height: 10px; */
         font-weight: 500;
-        padding: 3px 4px !important;
+        padding: 5px 5px !important;
     }
 
     .goto-cart{
-        padding: 3px !important;
-        width: 50px;
+        font-size: 11px;
+        margin-left: -6px;
+        padding: 5px 4px !important;
+        width: 73px;
         font-weight: 500 !important;
         margin-right: 0 !important;
     }
     
-    /* .card-action{
-        display: flex !important;
-        justify-content: space-between !important;
-    } */
-
+ 
     .btn-style{
         padding: 0 !important;
     }

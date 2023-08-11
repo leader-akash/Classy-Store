@@ -114,8 +114,11 @@
 
 .card-button-horiz .add {
     font-size: 14px;
-    width: 110px;
+    width: 125px;
+    margin-top: -5px !important;
+    margin-bottom: 10px;
 }
+
 
 .card-price-horiz{
     /* display: inline-block; */
@@ -125,8 +128,9 @@
     font-size: 13px !important;
    }
 
+  
 .fa-star{
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .count-item{

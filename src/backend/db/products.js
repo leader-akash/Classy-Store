@@ -28,7 +28,7 @@ export const products = [
     rating: 4,
     image: asus,
     description: "ASUS ROG Strix G15 Ryzen 9 Octa Core 5900HX - 16 GB/512 G...",
-    price: "₹66,990",
+    price: "₹5,990",
     marketPrice: "₹1,36,990",
     label: "Latest",
     labelStyle: "yellow"
@@ -40,7 +40,7 @@ export const products = [
     rating: 3.5,
     image: buds2,
     description: "Noise Newly Launched Buds VS401 in-Ear Truly Wireless Earbuds ...",
-    price: "₹6,990",
+    price: "₹199",
     marketPrice: "₹13,990",
     label: "Sale",
     labelStyle: "red"
@@ -52,7 +52,7 @@ export const products = [
     rating: 4.5,
     image: iphone,
     description: "APPLE iPhone 14 Plus (128 GB), variant colors ",
-    price: "₹70,990",
+    price: "₹899",
     marketPrice: "₹1,30,990",
     label: "Best Seller",
     labelStyle: "blue"
@@ -74,7 +74,7 @@ export const products = [
     rating: 2.5,
     image: cam2,
     description: "Polo EOS 5D Mark IV 30.4 MP Digital SLR Camera (Black) wit...",
-    price: "₹50,299",
+    price: "₹1,299",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
@@ -85,8 +85,8 @@ export const products = [
     rating: 3,
     image: game1,
     description: "PS4 sony latest version, smooth gaming,  Slim 500 GB Console",
-    price: "₹50,299",
-    marketPrice: "₹1,59,630",
+    price: "₹99",
+    marketPrice: "₹19,630",
     label: "",
     labelStyle: ""
   },
@@ -107,7 +107,7 @@ export const products = [
     rating: 4,
     image: "https://m.media-amazon.com/images/I/51M0Yi3zmUL._AC_UY218_.jpg",
     description: "Dell Vostro 3420 Laptop,Intel i5-1135G7/8GB/512GB SSD F...",
-    price: "₹66,990",
+    price: "₹2,990",
     marketPrice: "₹1,36,990",
     label: "Latest",
     labelStyle: "yellow"
@@ -131,7 +131,7 @@ export const products = [
     rating: 4,
     image: asus,
     description: "ASUS ROG Strix G15 Ryzen 9 Octa Core 5900HX - 16 GB/512 G...",
-    price: "₹66,990",
+    price: "₹43,990",
     marketPrice: "₹1,36,990",
     label: "Latest",
     labelStyle: "yellow"
@@ -155,7 +155,7 @@ export const products = [
     rating: 4.5,
     image: "https://m.media-amazon.com/images/I/61LB+d0vheL._AC_UY218_.jpg",
     description: "OnePlus Nord CE 3 Lite 5G (Chromatic Gray, 8GB RAM, 128GB Storage) ",
-    price: "₹70,990",
+    price: "₹7,990",
     marketPrice: "₹1,30,990",
     label: "Best Seller",
     labelStyle: "blue"
@@ -166,7 +166,7 @@ export const products = [
     rating: 4,
     image: laptop,
     description: "Apple macbook Ryzen 9 Octa Core 5900HX - 16 GB/512 G...",
-    price: "₹66,990",
+    price: "₹990",
     marketPrice: "₹1,36,990",
     label: "Latest",
     labelStyle: "yellow"
@@ -178,7 +178,7 @@ export const products = [
     rating: 2.5,
     image: "https://m.media-amazon.com/images/I/31Nk80-hUUL._AC_UY218_.jpg",
     description: "CCTV camera HD, full quality..",
-    price: "₹50,299",
+    price: "₹3,699",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
@@ -222,7 +222,7 @@ export const products = [
     rating: 2.5,
     image: "https://m.media-amazon.com/images/I/712n-jj40jL._AC_UY218_.jpg",
     description: "SK Mark IV 30.4 MP Digital SLR Camera (Black) wit...",
-    price: "₹50,299",
+    price: "₹4,299",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
@@ -255,7 +255,7 @@ export const products = [
     rating: 3,
     image: game1,
     description: "PS4 sony latest version, smooth gaming,  Slim 500 GB Console",
-    price: "₹50,299",
+    price: "₹399",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
@@ -266,7 +266,7 @@ export const products = [
     rating: 3,
     image: "https://m.media-amazon.com/images/I/61HG3DVxTaL._AC_UY218_.jpg",
     description: "SJCAM C200 Action Camera 4K 24FPS Optical 16MP | Magnetic Body ...",
-    price: "₹50,299",
+    price: "₹2,299",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
@@ -277,7 +277,7 @@ export const products = [
     rating: 4.5,
     image: "https://m.media-amazon.com/images/I/712n-jj40jL._AC_UY218_.jpg",
     description: "SK Mark IV 30.4 MP Digital SLR Camera (Black) wit...",
-    price: "₹50,299",
+    price: "₹5,299",
     marketPrice: "₹1,59,630",
     label: "",
     labelStyle: ""
