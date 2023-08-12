@@ -50,7 +50,7 @@ const PriceList = ({ responseSummary, setResponseSummary }) => {
           </div>
           <hr />
           <div className='price-info'>
-            <div className='price-total font-sm'>TOTAL AMOUNT </div>
+            <div className='price-total font-sm'>TOTAL AMOUNT: </div>
             <p className='price-total'>{totalPrice.toLocaleString("en-IN", { style: "currency", currency: "INR", minimumFractionDigits: 0, maximumFractionDigits: 0, })}</p></div>
           <hr />
         </div>

@@ -79,6 +79,77 @@
 }
 
 
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+  
+.price-container{
+    width: 17rem;
+    height: 21rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    /* border: solid 1px var(--button); */
+    border: none;
+    margin-right: 0;
+    margin-bottom: 3rem;
+    margin-top: 1.6rem;
+}
+
+.price-detail{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+
+.price-description{
+    box-shadow: var(--box-shadow);
+    margin: 1rem 1rem 0.5rem;
+    padding: 1rem;
+}
+
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    padding:0.4rem ;
+   align-items: center;
+}
+
+.p-tag{
+        font-size: 15px;
+        margin-bottom: 5px;
+}
+.price-total{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0.6rem 0;
+}
+
+.font-sm{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.paynow{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 14rem;
+    margin-top: 1.3rem;
+    background-color: var(--background-color);
+    border: solid 1px green;
+    cursor: pointer;
+}
+
+
+
+}
+
+
 
 
 

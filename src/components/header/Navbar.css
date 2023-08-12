@@ -113,16 +113,18 @@ span i {
 /* Extra small devices (phones) */
 @media only screen and (min-width: 200px) and (max-width: 409px) {
   .navbar-wrapper {
-    /* height: 10vh; */
+    height: 6.4rem;
     position: fixed !important;
     top: 0;
     z-index: 100;
-    /* display: flex !important;
-    justify-content: space-between !important; */
+    display: flex;
+    flex-wrap: wrap;
+    /* display: inline-block !important; */
   }
 
   .logo {
-    font-size: 14px;
+    font-size: 22px;
+    margin-top: 7px;
   }
 
   .logo-hover{
@@ -130,58 +132,67 @@ span i {
   }
 
   .search-bar {
-    margin-left: 2px !important;
+    order: 1;
+    margin-left: 7px !important;
     margin-top: 5px;
-    width: 93px;
+    width: 330px;
     display: flex;
     justify-content: space-between;
-    margin-right: 8px;
+    margin-right: 0px;
   }
 
   .search-bar i {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .search-bar .search-input {
-    font-size: 9px;
-    width: 70px;
+    font-size: 15px;
+    width: 310px;
   }
   .sign-in {
     margin-top: 8px;
-    font-size: 9px;
+    font-size: 12px;
     margin-bottom: 0;
-    width: 50px !important;
-    height: 2rem;
+    width: 64px !important;
+    height: 2.2rem;
     text-align: center !important;
-    margin-right: 2rem;
+    margin-right: 1rem;
+  }
+
+  .signin-link{
+    padding-right: 0;
   }
 
   span i {
     cursor: pointer;
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .badge-icon > i {
-    font-size: 10px;
+    font-size: 14px;
     margin: 0 !important;
   }
 
   .badge {
-    font-size: 6px;
+    font-size: 9px;
   }
 
   .wishlist-badge{
-    padding: 0 !important
+    padding: 0 !important;
+    margin: -19px;
   }
 
   .addtocart-badge{
-    padding: 0 !important
+    padding: 0 !important;
+    margin: -10px;
   }
 
   .button-right {
-    margin-top:  0 !important;
+    margin-top:  1px !important;
     /* display: inline-block; */
     display: flex;
+    padding: 0px !important;
+    /* margin: -16px !important; */
     justify-content: end !important;
   }
 

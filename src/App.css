@@ -44,3 +44,17 @@ input:focus{
 .Toastify__toast{
   top: 3rem;
 }
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+  .Toastify__toast{
+    top: 3rem;
+    /* width: 18rem; */
+  }
+ 
+
+}

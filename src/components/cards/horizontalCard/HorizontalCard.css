@@ -87,3 +87,98 @@
 .cancel-btn{
     margin-left: auto;
 }
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones) */
+@media only screen and (min-width: 200px) and (max-width: 409px) {
+
+    
+.card-container-horiz{
+    height: 12rem;
+    width: 17rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+}
+
+.card-button-horiz {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0rem;
+    font-size: 14px !important;
+    margin-left: 1rem;
+    align-items: center;
+}
+
+.card-button-horiz .add {
+    font-size: 14px;
+    width: 125px;
+    margin-top: -5px !important;
+    margin-bottom: 10px;
+}
+
+
+.card-price-horiz{
+    /* display: inline-block; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+    font-size: 13px !important;
+   }
+
+  
+.fa-star{
+    font-size: 9px;
+}
+
+.count-item{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+
+.count-btn{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0 !important;
+    width: 20px !important;
+    text-align: center;
+    /* height: 30px !important; */
+}
+
+.fix-count{
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 1rem;
+}
+
+.horiz-img{
+    margin-top: 22px;
+    width: 107px;
+    height: 85px;
+    margin-left: 0.5rem !important;
+    margin-bottom: 1rem;
+}
+
+.cancel-btn{
+    margin-left: auto;
+    font-size: 12px;
+}
+
+.card-info-horiz{
+    font-size: 13px !important;
+    margin-left: 0.5rem !important;
+}
+
+   
+
+}
+
+
+
+
+
+
