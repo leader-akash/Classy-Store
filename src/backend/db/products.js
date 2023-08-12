@@ -23,7 +23,7 @@ export const products = [
   //   categoryName: "non-fiction",
   // },
   {
-    _id: uuid(),
+    _id: "1234ddfdfs2",
     category: 'laptop',
     rating: 4,
     image: asus,
@@ -35,7 +35,7 @@ export const products = [
 
   },
   {
-    _id: uuid(),
+    _id: "1234ddfdf54534sdf45",
     category: 'headphones',
     rating: 3.5,
     image: buds2,
@@ -47,7 +47,7 @@ export const products = [
   },
 
   {
-    _id: uuid(),
+    _id: "kjhdf56ds5f5",
     category: 'mobiles',
     rating: 4.5,
     image: iphone,

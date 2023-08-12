@@ -7,26 +7,8 @@ import React, { useState, useEffect } from 'react'
 const WishlistItems = () => {
 
    const [wishlistItem, setWishlistItem] = useState([]);
-   const { getToken } = useUser();
 
    const { wishlistData } = useWishlist();
-
-
-   // useEffect(() => {
-
-   //    axios.get(`/api/user/wishlist`, {
-   //       headers: {
-   //          authorization: getToken
-   //       }
-   //    }).then((res) => {
-
-   //       setWishlistItem(res.data.wishlist);
-   //    })
-   //       .catch((err) => {
-   //          console.log("wish-err", err);
-   //       })
-
-   // }, [getToken])
 
    return (
       <div className='flex wishlist-wrap'>

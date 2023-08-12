@@ -17,9 +17,9 @@ import RequireAuth from "components/restrictedRoutes/RequireAuth";
 
 function App() {
 
-  useEffect(()=>{
-    window.scrollTo({top:0, left: 0, behavior: "smooth"})
-  },[])
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+  }, [])
 
   return (
     <>
@@ -38,10 +38,10 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
         </Route>
-
+        <Route path='*' element={<div style={{ margin: '12rem', textAlign:'center', fontWeight: 'bold', fontSize: '2rem' }}>404 Page not found</div>} />
         <Route path="/mockman" element={<Mockman />} />
       </Routes>
-      <ToastContainer 
+      <ToastContainer
         position="top-center"
         autoClose={3000}
         hideProgressBar={false}

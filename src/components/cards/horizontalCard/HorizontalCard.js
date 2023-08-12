@@ -13,7 +13,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
   const [isProductAdded, setIsProductAdded] = useState(false);
   const { addToWishlist, wishlistData, handleRemoveWishlist } = useWishlist();
 
-  const { dispatch, handleRemoveCart, cartData, setCartData } = useCart();
+  const { dispatch, handleRemoveCart, cartData, setCartData, setAddToCart } = useCart();
 
   const [count, setCount] = useState(1);
 
@@ -39,27 +39,25 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
     }
   }
 
-
   const handleIncreaseCartItem = () => {
     setCount(count + 1)
-    axios.post(`/api/user/cart`
-        , {
-          product: product
-        }, {
-        headers: {
-          authorization: token
-        }
+    axios.post(`/api/user/cart/${_id}`,{
+      action: {
+        type: "increment",
+      },
+    },
+    {
+      headers: {
+        authorization: getToken
       }
-      ).then((res) => {
-        setCartData(res?.data?.cart)
-
-        // toast.success("Added to Cart 🎉")
-      })
-        .catch((error) => {
-          console.log("card-error", error)
-        })
-  
-    
+    }
+      
+    )
+    .then((res)=>{
+      setCartData(res?.data?.cart)
+    }).catch((err)=>{
+      console.log("qty-err", err)
+    })
   }
 
   const token = localStorage.getItem("token")
@@ -67,7 +65,23 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
 
   const handleDecrease = () => {
     setCount(count - 1)
+    axios.post(`/api/user/cart/${_id}`,{
+      action: {
+        type: "decrement",
+      },
+    },
+    {
+      headers: {
+        authorization: getToken
+      }
     }
+    )
+    .then((res)=>{
+      setCartData(res?.data?.cart)
+    }).catch((err)=>{
+      console.log("qty-err", err)
+    })
+  }
 
 
 
@@ -102,7 +116,7 @@ const HorizontalCard = ({ image, description, price, marketPrice, label, labelSt
               {price}
             </div>
             <div style={{ fontSize: '13px' }}><strike>{marketPrice}</strike></div>
-            <div className="rating">{rating}<i class="fa-solid fa-star"></i></div>
+            <div className="rating">{rating}<i className="fa-solid fa-star"></i></div>
           </div>
           <div className="card-button-horiz move-cart" onClick={() => { getToken ? handleAddtoWishlist(_id) : navigate("/login") }}>
             {/* <div className="like"><i className="far fa-heart fa-2x"></i></div> */}
