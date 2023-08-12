@@ -11,17 +11,17 @@ const WishlistProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const { getToken } = useUser();
   const [wishlistData, setWishlistData] = useState([]);
+const tokenVal = localStorage.getItem('token');
 
   // add to wishlist 
   const addToWishlist = (prod) => {
-    if (getToken) {
+    if (tokenVal) {
       axios.post(`/api/user/wishlist`, {
         product: prod
       }, {
         headers: {
-          authorization: getToken
+          authorization: tokenVal
         }
       }
       ).then((res) => {
@@ -40,7 +40,7 @@ const WishlistProvider = ({ children }) => {
   const getAllWishlistData = () => {
     axios.get(`/api/user/wishlist`, {
       headers: {
-        authorization: getToken
+        authorization: tokenVal
       }
     })
       .then((res) => {
@@ -61,7 +61,7 @@ const WishlistProvider = ({ children }) => {
     axios.delete(`/api/user/wishlist/${_id}`,
       {
         headers: {
-          authorization: getToken
+          authorization: tokenVal
         }
       })
       .then((res) => {
@@ -78,7 +78,7 @@ const WishlistProvider = ({ children }) => {
     axios.delete(`/api/user/wishlist/${_id}`,
       {
         headers: {
-          authorization: getToken
+          authorization: tokenVal
         }
       })
       .then((res) => {

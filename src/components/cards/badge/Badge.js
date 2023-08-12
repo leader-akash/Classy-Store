@@ -5,7 +5,7 @@ const Badge = ({icon, content}) => {
   return (
     <>
         <div className="small-badge">
-        <i class={icon}></i>
+        <i className={icon}></i>
             <div>
                 {content}
             </div>

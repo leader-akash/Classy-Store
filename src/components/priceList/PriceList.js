@@ -20,11 +20,11 @@ const PriceList = ({ responseSummary, setResponseSummary }) => {
   }
 
   const totalMarketPrice = cartData.reduce((acc, curr) => {
-    return acc + Number(curr?.marketPrice.replaceAll("₹", "").replaceAll(",", ""))
+    return acc + (Number(curr?.marketPrice.replaceAll("₹", "").replaceAll(",", "")) * curr?.qty)
   }, 0);
 
   const totalPrice = cartData.reduce((acc, curr) => {
-    return acc + Number(curr?.price.replaceAll("₹", "").replaceAll(",", ""))
+    return acc + (Number(curr?.price.replaceAll("₹", "").replaceAll(",", "")) * curr?.qty)
   }, 0)
 
   const totalDiscount = totalMarketPrice - totalPrice

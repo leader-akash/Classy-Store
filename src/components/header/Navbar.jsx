@@ -57,15 +57,15 @@ const Navbar = () => {
     <div className="nav-two-container navbar-wrapper">
 
       <Link className="logo-hover" to="/"><div className="logo">Classy Store</div></Link>
-      <div class="search-bar" onClick={handleSearchNavigation}>
-        <input className="search-input" type="search" placeholder="Search classy-store.netlify.app" onChange={handleSearch} />
+      <div className="search-bar" onClick={handleSearchNavigation}>
+        <input className="search-input" type="search" placeholder="Search in Classy Store" onChange={handleSearch} />
         <i className="fa-solid fa-magnifying-glass "></i>
       </div>
       <div className="button-right responsive-btn">
         <div className="icon-setting1" >
           <Link className="wishlist-badge" to="/products">
             <span className="badge-icon">
-              <i class="fa-solid fa-shop"></i>
+              <i className="fa-solid fa-shop"></i>
             </span>
           </Link>
         </div>

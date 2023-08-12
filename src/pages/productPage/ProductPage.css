@@ -12,7 +12,25 @@
     width: 220px;
 }
 
+.no__result {
+    margin:10rem;
+    margin-left: 15rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.no__result-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.no__result-desc {
+    font-size: 1.1rem;
+    color: #575656;
+    text-align: center;
+}
 /* Media Queries for Responsiveness */
 
 /* Extra small devices (phones) */
@@ -30,6 +48,4 @@
     .product-sidebar{
         width: 220px;
     }
-    
-
 }
